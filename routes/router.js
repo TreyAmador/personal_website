@@ -45,20 +45,31 @@
  */
 
 
-
 var express = require('express')
 var router = express()
-var pug = require('pug')
+
+
+router.get('/',function(req,res){
+    res.render('home',{
+        home:'home'
+    })
+})
 
 
 router.get('/resume',function(req,res){
-    res.send('Resume, download pdf')
+    res.render('resume',{
+        resume:'resume'
+    })
 })
 
 
-router.get('/router',function(req,res){
-    res.send('at router')
+router.get('/blog',function(req,res){
+    res.render('blog',{
+        blog:'blog'
+    })
 })
+
+
 
 
 module.exports = router
