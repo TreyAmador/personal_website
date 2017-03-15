@@ -1,0 +1,55 @@
+
+
+body, html {
+    height: 100%;
+    margin: 0;
+}
+
+
+
+.introduction {
+    font-size: 100px;
+    font-family: "Century Gothic";
+    font-style: italic;
+    font-weight: bold;
+    letter-spacing: 5px;
+    opacity: 0.75;
+    color: lightpink;
+    bottom: 100px;
+}
+
+
+.scroll-image {
+    position: relative;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(../img/mountain_road.jpg);
+    min-height: 100%;
+}
+
+
+.panel-text {
+    color: #000000;
+    background-color: #ffffff;
+    text-align: center;
+    padding: 500px 80px;
+    text-align: justify;
+}
+
+
+.caption {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 100%;
+    text-align: center;
+    color: #000;
+}
+
+
+
+
+
+
