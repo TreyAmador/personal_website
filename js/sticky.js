@@ -2,30 +2,18 @@
     allows header bar to stick to the top
 */
 
-
-$(document).ready(function() {
-    var nav = $('.nav');
-    var delta_y = nav.offset().top;
-    var is_fixed = false;
+/* allows header bar to stick to top of screen when scrolling down */
+$(window).ready(function() {
+    var navbar = $('.navigation-bar');
+    var delta = navbar.offset().top;
     function scroll() {
-        var should_fix = $(document).scrollTop() > delta_y;
-        if (should_fix && !is_fixed) {
-            nav.css({
-                position: 'fixed',
-                top: 0,
-                left: nav.offset().left,
-                width: nav.width()
-            });
-            is_fixed = true;
-        } else if (!should_fix && is_fixed) {
-            nav.css({
-                position: 'static'
-            });
-            is_fixed = false;
+        if ($(window).scrollTop() > delta) {
+            $('.navigation-container').addClass('fixed');
+        } else {
+            $('.navigation-container').removeClass('fixed');
         }
     }
-    document.onscroll = scroll;
+    window.onscroll = scroll;
 });
-
 
 
