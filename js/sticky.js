@@ -3,12 +3,12 @@
 */
 
 
-$(window).load(function(){
+$(document).ready(function(){
     $(function() {
         var nav = $('.nav');
         var navHomeY = nav.offset().top;
         var isFixed = false;
-        var $w = $(window);
+        var $w = $(document);
         $w.scroll(function() {
             var scrollTop = $w.scrollTop();
             var shouldBeFixed = scrollTop > navHomeY;
