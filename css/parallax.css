@@ -1,12 +1,8 @@
 
-
 body, html {
     height: 100%;
     margin: 0;
 }
-
-
-
 .introduction {
     font-size: 100px;
     font-family: "Century Gothic";
@@ -17,8 +13,6 @@ body, html {
     color: lightpink;
     bottom: 100px;
 }
-
-
 .scroll-image {
     position: relative;
     background-attachment: fixed;
@@ -28,8 +22,6 @@ body, html {
     background-image: url(../img/mountain_road.jpg);
     min-height: 100%;
 }
-
-
 .panel-text {
     color: #000000;
     background-color: #ffffff;
@@ -37,8 +29,6 @@ body, html {
     padding: 500px 80px;
     text-align: justify;
 }
-
-
 .caption {
     position: absolute;
     left: 0;
@@ -47,9 +37,8 @@ body, html {
     text-align: center;
     color: #000;
 }
-
-
-
-
-
-
+.banner {
+    position: absolute;
+    top: 1000px;
+    font-size: 100px;
+}
