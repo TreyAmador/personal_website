@@ -1,21 +1,34 @@
+/*
+    allows header bar to stick to the top
+*/
 
 
-$(document).ready(function() {
-
-    var menu = $('.navbar-default');
-    var delta_y = menu.offset().top;
-
-    function scroll() {
-        if ($(window).scrollTop() >= delta_y) {
-            $('.navbar-default').addClass('navbar-fixed-top');
-            $('.content').addClass('menu-padding');
-        } else {
-            $('.navbar-default').removeClass('navbar-fixed-top');
-            $('.content').removeClass('menu-padding');
-        }
-    }
-
-    document.onscroll = scroll;
+$(window).load(function(){
+    $(function() {
+        var nav = $('.nav');
+        var navHomeY = nav.offset().top;
+        var isFixed = false;
+        var $w = $(window);
+        $w.scroll(function() {
+            var scrollTop = $w.scrollTop();
+            var shouldBeFixed = scrollTop > navHomeY;
+            if (shouldBeFixed && !isFixed) {
+                nav.css({
+                    position: 'fixed',
+                    top: 0,
+                    left: nav.offset().left,
+                    width: nav.width()
+                });
+                isFixed = true;
+            } else if (!shouldBeFixed && isFixed) {
+                nav.css({
+                    position: 'static'
+                });
+                isFixed = false;
+            }
+        });
+    });
 });
+
 
 
