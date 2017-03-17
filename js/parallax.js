@@ -15,13 +15,16 @@ function ParallaxElement(id) {
 $(document).ready(function() {
     var element = '#parallax-element';
     var prlx = $(element);
-    var y_init = parseInt(prlx.css('top'),10);
+    const y_init = parseInt(prlx.css('top'),10);
+    console.log(y_init);
     function parallax() {
-        var y_offset = window.pageYOffset;
         prlx = $(element);
-        var y_pos = -0.3*(y_offset)+'px';
+        var y_offset = window.pageYOffset;
+        var y_pos = y_init+(-0.3*(y_offset))+'px';
         prlx.css('top',y_pos);
     }
     window.onscroll = parallax;
 });
+
+
 
