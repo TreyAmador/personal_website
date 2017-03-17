@@ -1,0 +1,26 @@
+/* stylesheet for parallax */
+
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+#parallax-element {
+    position: absolute;
+    top: 0px;
+    height: 720px;
+    width: 100%;
+    z-index: -1;
+    background-image: url("../img/mountain_road.jpg");
+}
+
+#content {
+    height: 750px;
+    width: 100%;
+    background-color: #4dbbac;
+    position: absolute;
+    left: 0px;
+    top: 600px;
+    z-index: 1;
+}
