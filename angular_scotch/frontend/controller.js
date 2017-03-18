@@ -8,22 +8,28 @@ var scotchApp = angular.module('scotchApp',['ngRoute']);
 scotchApp.config(function($routeProvider) {
     $routeProvider
         .when('/', {
-            templateUrl: 'pages/home.html',
+            templateUrl: 'views/home.html',
             controller: 'mainController'
         })
         .when('/about', {
-            templateUrl: 'pages/about.html',
+            templateUrl: 'views/about.html',
             controller: 'aboutController'
         })
         .when('/contact', {
-            templateUrl: 'pages/contact.html',
+            templateUrl: 'views/contact.html',
             controller: 'contactController'
         });
 });
 
 
-scotchApp.controller('mainController', function($scope) {
+scotchApp.controller('mainController', function($scope,$http) {
     $scope.message = 'This comes from the main controller';
+    $http.get('/').success(function(res) {
+        //$scope.message = res.body;
+        console.log(res);
+    });
+
+
 });
 
 
