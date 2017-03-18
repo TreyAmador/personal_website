@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Parallaxative</title>
+    <style>
+      * {
+        margin: 0px;
+        padding: 0px;
+      }
+      #image {
+        position: relative;
+        z-index: -1;
+      }
+      #content {
+        height: 750px;
+        width: 100%;
+        margin-top: -10px;
+        background-color: #4dbbac;
+        position: relative;
+        z-index: 1;
+      }
+    </style>
+    <script>
+        var ypos,image;
+        function parallax() {
+            ypos = window.pageYOffset;
+            image = document.getElementById('image');
+            image.style.top = ypos * 0.3 + 'px';
+        }
+        window.addEventListener('scroll',parallax);
+    </script>
+  </head>
+  <body>
+    <img id="image" src="img/mountain_road.jpg" height="720px" width="100%" />
+    <div id="content"></div>
+  </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
