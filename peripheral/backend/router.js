@@ -45,32 +45,24 @@
  */
 
 
-var express = require('express')
-var router = express()
+var express = require('express');
+var router = express.Router();
 
 
 router.get('/',function(req,res){
-    res.render('home',{
-        home:'home'
-    })
-})
+    res.render('index.html');
+});
 
 
 router.get('/resume',function(req,res){
-    res.render('resume',{
-        resume:'resume'
-    })
-})
+    res.render('resume.html');
+});
 
 
 router.get('/blog',function(req,res){
-    res.render('blog',{
-        blog:'blog'
-    })
-})
+    res.redirect('/');
+});
 
 
-
-
-module.exports = router
+module.exports = router;
 

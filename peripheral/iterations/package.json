@@ -1,26 +1,19 @@
 {
-  "name": "js_personal",
+  "name": "js_router_angular",
   "version": "1.0.0",
-  "description": "proj for personal website",
+  "description": "",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
   },
-  "author": "Trey Amador",
+  "author": "",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.17.1",
-    "cookie-parser": "^1.4.3",
     "express": "^4.15.2",
-    "favicon": "0.0.2",
-    "http": "0.0.0",
     "morgan": "^1.8.1",
     "nodemon": "^1.11.0",
     "path": "^0.12.7"
-  },
-  "repository": {
-    "type": "git",
-    "url": "http://github.com/TreyAmador/personal_website.git"
   }
 }
