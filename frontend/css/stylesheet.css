@@ -1,0 +1,122 @@
+
+/*
+    style sheet for personal website
+*/
+.navbar-default {
+  background-color: #ffffff;
+  border-color: #ffffff;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  /*border: none;*/
+}
+.navbar-default .navbar-brand {
+  color: #ff9900;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 20px;
+  letter-spacing: 3px;
+
+}
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:focus {
+  color: #ffcc92;
+}
+.navbar-default .navbar-text {
+  color: #414142;
+  text-align: right;
+}
+.navbar-default .navbar-nav > li > a {
+  color: #414142;
+}
+
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+  color: #ffcc92;
+}
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus {
+  color: #ffcc92;
+  background-color: #ffffff;
+}
+.navbar-default .navbar-nav > .open > a,
+.navbar-default .navbar-nav > .open > a:hover,
+.navbar-default .navbar-nav > .open > a:focus {
+  color: #ffcc92;
+  background-color: #ffffff;
+}
+.navbar-default .navbar-toggle {
+  border-color: #ffffff;
+}
+.navbar-default .navbar-toggle:hover,
+.navbar-default .navbar-toggle:focus {
+  background-color: #ffffff;
+}
+.navbar-default .navbar-toggle .icon-bar {
+  background-color: #414142;
+}
+.navbar-default .navbar-collapse,
+.navbar-default .navbar-form {
+  border-color: #ffffff;
+}
+.navbar-default .navbar-link {
+  color: #414142;
+}
+.navbar-default .navbar-link:hover {
+  color: #ffcc92;
+}
+.navbar-default {
+  -webkit-box-shadow: 0px 2px 0px 0px rgba(255,227,171,0.17);
+  -moz-box-shadow: 0px 2px 0px 0px rgba(255,227,171,0.17);
+  box-shadow: 0px 2px 0px 0px rgba(255,227,171,0.17);
+}
+
+/* prevents header from collapsing too early */
+@media only screen and (min-width: 540px) {
+    .collapse {
+        display: block;
+    }
+    .navbar-header {
+        float: left;
+    }
+    .navbar-toggle {
+        display: none;
+    }
+    .navbar-nav.navbar-left {
+       float: left;
+       margin: 0;
+    }
+    .navbar-nav.navbar-right {
+       float: right;
+       margin: 0;
+    }
+    .navbar-nav>li {
+        float: left;
+    }
+    .navbar-nav>li>a {
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+}
+@media only screen and (max-width: 540px) {
+     .collapse {
+        display: none;
+     }
+
+     .navbar-header {
+        display: block;
+     }
+}
+
+/*
+body {
+  background: url(../img/mountain_road.jpg) no-repeat center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+*/
+
+
+
