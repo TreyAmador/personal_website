@@ -10,9 +10,17 @@ var personalApp = angular
                 templateUrl: 'views/home.html',
                 controller: 'homeCtlr'
             })
-            .when('/about', {
-                templateUrl: 'views/about.html',
-                controller: 'aboutCtlr'
+            .when('/resume', {
+                templateUrl: 'views/resume.html',
+                controller: 'resumeCtlr'
+            })
+            .when('/demo', {
+                templateUrl: 'views/demo.html',
+                controller: 'demoCtlr'
+            })
+            .when('/blog', {
+                templateUrl: 'views/blog.html',
+                controller: 'blogCtlr'
             })
             .when('/contact', {
                 templateUrl: 'views/contact.html',
@@ -22,9 +30,7 @@ var personalApp = angular
                 templateUrl: 'views/error.html',
                 controller: 'errorCtlr'
             });
-        $locationProvider.html5Mode({
-            enabled: true
-        });
+        $locationProvider.html5Mode({ enabled: true });
     });
 
 
@@ -35,8 +41,13 @@ personalApp.controller('homeCtlr', function($scope,$http) {
 });
 
 
-personalApp.controller('aboutCtlr',function($scope) {
+personalApp.controller('resumeCtlr',function($scope) {
     $scope.message = 'This is a description of me!';
+});
+
+
+personalApp.controller('demoCtlr',function($scope) {
+    $scope.message = 'Demonstrations';
 });
 
 
