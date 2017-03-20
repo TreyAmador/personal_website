@@ -4,10 +4,8 @@
 
 
 var add_header_animation = function(addEvent) {
-    if (addEvent == null || typeof(addEvent) == 'undefined')
-        return;
     var navbar = $('.navbar-header'),
-        offset = 500;   // offset should be initial position of header bar
+        offset = 200;   // offset should be initial position of header bar
     function animate_navbar() {
         if (window.pageYOffset > offset)
             navbar.addClass('navbar-header-shrink');
@@ -32,7 +30,6 @@ var add_sticky_header = function(addEvent) {
 }
 
 
-
 var addEvent = function(object,type,callback) {
     if (object == null || typeof(object) == 'undefined')
         return;
@@ -45,11 +42,10 @@ var addEvent = function(object,type,callback) {
 }
 
 
-
 /* header bar shrinks once there is a scroll down window */
 $(document).ready(function() {
     add_header_animation(addEvent);
-    add_sticky_header(addEvent);
+    //add_sticky_header(addEvent);
 });
 
 

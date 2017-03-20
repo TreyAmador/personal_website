@@ -2,22 +2,40 @@
 
 
 .navbar-header {
+  position: fixed;
+  top: 0px;
 	width: 100%;
-	background: #f6f6f6;
-	z-index: 10000;
 	height: 230px;
+	background: #ffffff;
+	z-index: 10000;
 	overflow: hidden;
+  box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.5);
 	-webkit-transition: height 0.3s;
 	-moz-transition: height 0.3s;
 	transition: height 0.3s;
 }
+
 
 .navbar-header .navbar-inner {
 	width: 90%;
 	max-width: 69em;
 	margin: 0 auto;
 	padding: 0 1.875em;
+  text-decoration: none;
 }
+
+
+.navbar-header h1 a {
+  text-decoration: none;
+  color: #00fa9a;
+  font-family: Verdana;
+}
+
+
+.directory {
+  text-decoration: none;
+}
+
 
 .navbar-header h1,
 .navbar-header nav {
@@ -25,7 +43,6 @@
 	position: relative;
 }
 
- /* We just have one-lined elements, so we'll center the elements with the line-height set to the height of the header */
 .navbar-header h1,
 .navbar-header nav a {
 	line-height: 230px;
@@ -33,11 +50,12 @@
 
 .navbar-header h1 {
 	text-transform: uppercase;
-	color: #333;
+	color: #333333;
 	letter-spacing: 4px;
-	font-size: 4em;
+	font-size: 3em;
 	margin: 0;
 	float: left;
+  text-decoration: none;
 }
 
 .navbar-header nav {
@@ -46,7 +64,7 @@
 
 .navbar-header nav a {
 	color: #aaa;
-	font-weight: 700;
+	font-weight: 600;
 	margin: 0 0 0 20px;
 	font-size: 1.4em;
 }
@@ -126,24 +144,4 @@
 		line-height: 1;
 	}
 }
-
-
-/* 
-  style for the banner image
-  the height/width will be adjusted
-  in jQuery
-*/
-.banner {
-  overflow: hidden;
-  position: static;
-  height: 600px;
-  background-position-x: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-image: url("../img/mountain_road.jpg");
-  z-index: -1;
-  padding: 0;
-  margin: 0;
-}
-
 
