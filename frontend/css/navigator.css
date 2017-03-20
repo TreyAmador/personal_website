@@ -3,7 +3,7 @@
 
 .navbar-header {
 	position: fixed;
-	top: 0;
+	top: 400px;
 	left: 0;
 	width: 100%;
 	background: #f6f6f6;
@@ -129,4 +129,25 @@
 		line-height: 1;
 	}
 }
+
+
+
+
+/* 
+  style for the banner image
+  the height/width will be adjusted
+  in jQuery
+*/
+.banner {
+  overflow: hidden;
+  position: relative;
+  height: 500px;
+  background-position-x: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("../img/mountain_road.jpg");
+  padding: 0;
+  margin: 0;
+}
+
 

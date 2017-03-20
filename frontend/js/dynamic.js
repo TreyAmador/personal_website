@@ -3,6 +3,25 @@
 */
 
 
+var addEvent = function(object,type,callback) {
+    if (object == null || typeof(object) == 'undefined')
+        return;
+    if (object.addEventListener) {
+        object.addEventListener(type,callback,false);
+    } else if (object.attachEvent) {
+        object.attachEvent('on'+type, callback);
+    } else {
+        object['on'+type] = callback;
+    }
+}
+
+
+
+
+
+
+
+/* header bar shrinks once there is a scroll down window */
 $(document).ready(function() {
     var navbar = $('.navbar-header'),
         offset = 300;
@@ -13,60 +32,9 @@ $(document).ready(function() {
             navbar.removeClass('navbar-header-shrink');
         }
     }
-    window.onscroll = animate_navbar;
+    //window.onscroll = animate_navbar;
+    addEvent(window,'scroll',animate_navbar);
 });
 
 
-
-
-/*
-$(document).ready(function() {
-    var navbar = $('.navbar-header'),
-        offset = 300;
-    function animate_navbar() {
-        if (window.pageYOffset > offset) {
-            navbar.addClass('navbar-header-shrink');
-        } else {
-            navbar.removeClass('navbar-header-shrink');
-        }
-    }
-    window.onscroll = animate_navbar;
-});
-*/
-
-
-
-
-
-
-/*
-
-var animatedHeader = (function() {
-
-    var docElem = document.documentElement,
-        header = document.querySelector('.navbar-header'),
-        didScroll = false,
-        changeHeaderOn = 300;
-
-
-    function scrollPage() {
-        var sy = scrollY();
-        if (sy >= changeHeaderOn) {
-            classie.add
-        }
-    }
-
-
-    function init() {
-        window.addEventListener('scroll',function() {
-            if (!didScroll) {
-                didScroll = true;
-                setTimeout();
-            }
-        }, false);
-    }
-
-});
-
-*/
 
