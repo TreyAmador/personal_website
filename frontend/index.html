@@ -15,17 +15,39 @@
     <base href="/"></base>
   </head>
   <body ng-controller="homeCtlr">
-    <div class="navbar-header">
-      <div class="navbar-inner">
-        <h1><a href="/">Trey Amador</a></h1>
-        <nav>
-          <a class="directory" href="/resume">Resume</a>
-          <a class="directory" href="/demo">Demo</a>
-          <a class="directory" href="/blog">Blog</a>
-        </nav>
+    
+
+    <div>
+
+      <div class="navbar-header">
+        <div class="navbar-inner">
+          <a class="subject-name" href="/">trey amador</a>
+          <nav class="directory">
+            <a href="/resume">resume</a>
+            <a href="/demo">demo</a>
+            <a href="/blog">blog</a>
+            <a href="https://github.com/TreyAmador">github</a>
+          </nav>
+        </div>
       </div>
+
+
+      <div class="sidebar-header">
+        <div class="sidebar-inner">
+          <nav class="social-directory">
+            <a href="https://github.com/TreyAmador">github</a>
+            <a href="https://www.linkedin.com/">linkedin</a>
+            <a href="http://www.broncocorner.com">broncocorner</a>
+          </nav>
+        </div>
+      </div>
+
+
+      
+      <div ng-view></div>
+      
+
     </div>
-    <div ng-view></div>
   </body>
 </html>
 
