@@ -14,6 +14,7 @@ body {
 	height: 70px;
 	z-index: 1;
 	overflow: hidden;
+	background-color: rgba(255, 255,255, 0.0);
 }
 
 
@@ -29,9 +30,15 @@ body {
 	font-family: Arial, sans-serif;
 	text-decoration: none;
 	font-size: 1.5em;
-	margin: 1em 3em;
+	margin: 0.8em 3em;
 	letter-spacing: 1px;
 	float: left;
+	transition: color 200ms ease;
+}
+
+
+.subject-name:hover {
+	color: #ff8866;
 }
 
 
@@ -47,6 +54,7 @@ body {
 	color: #777777;
 	text-decoration: none;
 	font-size: 1em;
+	transition: color 200ms ease;
 }
 
 
@@ -79,10 +87,10 @@ body {
 .social-directory a {
 	font-size: 1em;
 	text-decoration: none;
-	
 	color: #777777;
 	font-family: Arial, sans-serif;
 	font-weight: bold;
+	transition: color 200ms ease;
 }
 
 
@@ -91,69 +99,7 @@ body {
 }
 
 
-.body-wrapper {
-	position: absolute;
-	left: 50px;
-	top: 50px;
-}
-
-
-.home-page {
-    position: static;
-    top: 0;
-    height: 3000px;
-    width: 100%;
-    background-color: white;
-    margin: 0;
-    padding: 0;
-    z-index: -100;
-}
-
-
-
-
-
-
-.parallax-element {
-	background-image: url("../img/slow_down.jpg");
-	background-repeat: no-repeat;
-	background-attachment: fixed;
-	z-index: -1;
-	background-position: 0px 0px;
-	background-size: cover;
-	width: 100%;
-	height: 100%;
-	position: center center;
-	background-position: center, center;
-}
-
-
-
-
-
-
-.synopsis {
-	font-family: Arial, sans-serif;
-	position: relative;
-	top: 4em;
-	color: #333333;
-	font-size: 1.5em;
-	margin: 2em 2em;
-
-}
-
-
-.emphasize-name {
-	border-bottom: solid thick;
-	border-bottom-color: rgba(255, 182, 193, 0.8);
-}
-
-
-.emphasize-skill {
-	color: #ffc0ce;
-	font-style: italic;
-}
-
+.
 
 
 
