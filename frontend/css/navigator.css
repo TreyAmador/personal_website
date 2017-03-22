@@ -33,12 +33,12 @@ body {
 	margin: 0.8em 3em;
 	letter-spacing: 1px;
 	float: left;
-	transition: color 200ms ease;
+	transition: color 1s ease;
 }
 
 
 .subject-name:hover {
-	color: #ff8866;
+	color: #ffa500;
 }
 
 
@@ -54,7 +54,7 @@ body {
 	color: #777777;
 	text-decoration: none;
 	font-size: 1em;
-	transition: color 200ms ease;
+	transition: color 300ms ease;
 }
 
 
@@ -90,7 +90,7 @@ body {
 	color: #777777;
 	font-family: Arial, sans-serif;
 	font-weight: bold;
-	transition: color 200ms ease;
+	transition: color 300ms ease;
 }
 
 
@@ -99,7 +99,6 @@ body {
 }
 
 
-.
 
 
 

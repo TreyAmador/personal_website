@@ -19,47 +19,6 @@
 }
 
 
-#parallax-element {
-	position: fixed;
-	top: 0px;
-	
-	width: 100%;
-	height: 1000px;
-	
-	
-	z-index: -1;
-	background-image: url("../img/slow_down.jpg");
-}
-
-
-/*
-
-#parallax-element {
-    position: fixed;
-    top: -300px;
-    height: 1200px;
-    width: 100%;
-    z-index: -1;
-    background-image: url("../img/mountain_road.jpg");
-}
-
-*/
-/*
-#parallax-element {
-	background-image: url("../img/slow_down.jpg");
-	background-repeat: no-repeat;
-	background-attachment: fixed;
-	z-index: -1;
-	width: 100%;
-	background-size: 100% auto;
-	height: 800px;
-	background-position: 0px 0px;
-	top: 0px;
-}
-*/
-
-
-
 .synopsis {
 	font-family: Arial, sans-serif;
 	position: relative;
@@ -98,24 +57,29 @@
     width: 20em;
     height: 20em;
     z-index: -1;
-    color: rgba(0, 0, 0, 1.0);
+    color: rgba(255, 255, 255, 0.0);
 }
 
 
 .image-git {
-    position: static;
     width: 100%;
     height: 100%;
     background-image: url("../img/avatar.png");
     background-repeat: no-repeat;
     background-size: 100% 100%;
-     
 }
 
 
-.test-click {
-    color: green;
+.entry-overlay {
+    position: relative;
+    top: 3em;
+    left: 3em;
+    width: 14em;
+    height: 14em;
+    background-color: #ffffff;
+
 }
+
 
 
 .description {
