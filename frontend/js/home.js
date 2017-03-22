@@ -3,8 +3,29 @@
 
 
 function hover_fade() {
-    var image = $('.image-git');
-    image.fadeOut(1000,function() {});
+
+    //var image = $('.image-git');
+    //image.fadeOut(1000,function() {});
+
+    //var image = $('.entry-git');
+    //image.animate({left:'500px'});
+    
+    
+    $('.entry-git').hover(function() {
+        $(this).fadeOut(1000,function(){});
+    });
+
+
+
+    //$('.image-git').mouseover(function() {
+    //    $(this).fadeOut(1000,function() {});
+    //    //console.log('entering');
+    //});
+
+    
+    
+
+
 }
 
 
