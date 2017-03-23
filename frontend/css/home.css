@@ -1,0 +1,123 @@
+/*
+    home class stylesheet
+*/
+
+
+.body-wrapper {
+	position: absolute;
+	left: 100px;
+	top: 100px;
+}
+
+
+.home-page {
+    position: static;
+    height: 3000px;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    z-index: -100;
+}
+
+
+
+
+.git-entry {
+    position: relative;
+    height: 400px;
+    width: 400px;
+    left: 3em;
+    top: 2em;
+}
+
+
+.git-entry-image {
+    position: relative;
+    height: 400px;
+    width: 400px;
+    left: 0.5em;
+    background-size: 400px 400px;
+    background-image: url("../img/avatar.png");
+}
+
+
+.git-entry-image a {
+    text-decoration: none;
+}
+
+
+.engine-entry {
+    position: relative;
+    height: 400px;
+    width: 400px;
+    left: 5em;
+    top: 6em;
+}
+
+
+.engine-entry-image {
+    position: relative;
+    height: 400px;
+    width: 400px;
+    left: 0.5em;
+    background-size: 400px 400px;
+    background-image: url("../img/cengine.png");
+}
+
+
+.engine-entry-image a {
+    text-decoration: none;
+}
+
+
+.entry-placard {
+    position: relative;
+    height: 90%;
+    width: 90%;
+    top: 10%;
+    left: 10%;
+    background-color: #ffffff;
+    opacity: 0.0;
+}
+
+
+.entry-text {
+    position: relative;
+    font-family: Arial, Helvetica, sans-serif;
+    bottom: 2em;
+    transform: rotate(270deg);
+    transform-origin: left bottom;
+}
+
+
+.entry-title {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+
+.entry-description {
+    font-size: 1.2em;
+}
+
+
+
+.entry-headline {
+    position: relative;
+    left: 1em;
+    bottom: 0em;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.5em;
+    color: #000000;
+    opacity: 0.0;
+}
+
+
+.entry-handle {
+
+}
+
+
+
+
+
