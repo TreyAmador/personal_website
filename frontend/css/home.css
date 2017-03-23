@@ -20,53 +20,12 @@
 }
 
 
-
-
-.git-entry {
+.entry-handle {
     position: relative;
-    height: 400px;
-    width: 400px;
-    left: 3em;
-    top: 2em;
-}
-
-
-.git-entry-image {
-    position: relative;
-    height: 400px;
-    width: 400px;
+    height: 100%;
+    width: 100%;
     left: 0.5em;
-    background-size: 400px 400px;
-    background-image: url("../img/avatar.png");
-}
-
-
-.git-entry-image a {
-    text-decoration: none;
-}
-
-
-.engine-entry {
-    position: relative;
-    height: 400px;
-    width: 400px;
-    left: 5em;
-    top: 6em;
-}
-
-
-.engine-entry-image {
-    position: relative;
-    height: 400px;
-    width: 400px;
-    left: 0.5em;
-    background-size: 400px 400px;
-    background-image: url("../img/cengine.png");
-}
-
-
-.engine-entry-image a {
-    text-decoration: none;
+    background-size: 100% 100%;
 }
 
 
@@ -74,7 +33,7 @@
     position: relative;
     height: 90%;
     width: 90%;
-    top: 10%;
+    top: 0;
     left: 10%;
     background-color: #ffffff;
     opacity: 0.0;
@@ -101,11 +60,10 @@
 }
 
 
-
 .entry-headline {
     position: relative;
     left: 1em;
-    bottom: 0em;
+    bottom: 1em;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 1.5em;
     color: #000000;
@@ -113,8 +71,43 @@
 }
 
 
-.entry-handle {
 
+
+.git-entry {
+    position: relative;
+    height: 400px;
+    width: 400px;
+    left: 3em;
+    top: 2em;
+}
+
+
+.git-entry-image {
+    background-image: url("../img/avatar.png");
+}
+
+
+.git-entry-image a {
+    text-decoration: none;
+}
+
+
+.engine-entry {
+    position: relative;
+    height: 300px;
+    width: 300px;
+    left: 5em;
+    top: 6em;
+}
+
+
+.engine-entry-image {
+    background-image: url("../img/cengine.png");
+}
+
+
+.engine-entry-image a {
+    text-decoration: none;
 }
 
 
