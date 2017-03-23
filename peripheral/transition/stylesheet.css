@@ -54,13 +54,18 @@
 }
 
 
+.entry-image a {
+    text-decoration: none;
+}
+
+
 .entry-placard {
     position: relative;
     height: 350px;
     width: 350px;
     top: 50px;
     left: 50px;
-    background-color: white;
+    background-color: #ffffff;
     opacity: 0.0;
 }
 
@@ -71,14 +76,8 @@
     bottom: 0em;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 1.5em;
-    font-weight: bold;
-}
-
-
-
-
-.description {
-    font-family: Arial, Helvetica, sans-serif;
+    color: #000000;
+    opacity: 0.0;
 }
 
 
