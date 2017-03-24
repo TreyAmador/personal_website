@@ -2,7 +2,7 @@
  * routing applications
  */
 
-var personalApp = angular
+var app = angular
     .module('personalApp',['ngRoute'])
     .config(function($routeProvider,$locationProvider) {
         $routeProvider
@@ -34,32 +34,34 @@ var personalApp = angular
     });
 
 
-personalApp.controller('homeCtlr', function($scope,$http) {
-    $http.get('/home').success(function(res) {
-        $scope.message = res;
-    });
+app.controller('homeCtlr', function($scope,$http) {
+    //$http.get('/home').success(function(res) {
+    //    $scope.message = res;
+    //});
 });
 
 
-personalApp.controller('resumeCtlr',function($scope) {
-    $scope.message = 'This is a description of me!';
+app.controller('resumeCtlr',function($scope,$http) {
+    $scope.resume_pdf = function() {
+        window.open('files/Amador_Trey_Resume.pdf');
+    }
 });
 
 
-personalApp.controller('demoCtlr',function($scope) {
+app.controller('demoCtlr',function($scope) {
     $scope.message = 'Demonstrations';
 });
 
 
-personalApp.controller('contactCtlr',function($scope) {
+app.controller('contactCtlr',function($scope) {
     $scope.message = 'Contact us. This is a demo.'
 });
 
 
-personalApp.controller('errorCtlr',function($scope,$http) {
+app.controller('errorCtlr',function($scope,$http) {
     $http.get('/404').success(function(res) {
-        //console.log(res);
         $scope.code = res;
     });
 });
+
 

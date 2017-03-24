@@ -3,13 +3,6 @@
 */
 
 
-.body-wrapper {
-	position: absolute;
-	left: 100px;
-	top: 100px;
-}
-
-
 .home-page {
     position: static;
     height: 3000px;
