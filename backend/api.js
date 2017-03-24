@@ -9,62 +9,47 @@ var mime = require('mime');
 var fs = require('fs');
 
 
+var mongoose = require('mongoose');
+mongoose.connect('mongodb://localhost:27017/personal');
+var Message = require('./models/message')(mongoose);
+
+
 router.get('/home',function(req,res) {
     return res.json('hey!');
 });
 
 
 /**
- * some more routing here!
+ * some more routing here
  */
-router.post('/download-resume',function(req,res,next) {
-    
-    //return res.send(new Buffer('download resume'));
 
-    /*
-    var file = __dirname.split('backend')[0]+
-        'frontend/external/Amador_Trey_Resume.pdf';
-    var filename = path.basename(file);
-    var mimetype = mime.lookup(file);
-    res.set('Content-disposition','attachment; filename='+filename);
-    res.set('Content-type',mimetype);
-    var filestream = fs.createReadStream(file);
-    filestream.pipe(res);
-    */
-    /*
-    var filepath = '/external/Amador_Trey_Resume.pdf';
-    var file = 'Amador_Trey_Resume.pdf';
-    res.download(__dirname+filepath,file,function() {
-        if (err) {
-            // handle error...
-        } else {
-            // decrement download credit
-        }
+/*
+        username: {type: String, required: true},
+        email: {type: String},
+        subject: {type: String, required: true},
+        textbody: {type: String, required: true},
+        created_at: {type: Date, default: Date.now}
+*/
+
+router.post('/user-message',function(req,res) {
+    var msg = new Message({
+        username: req.body.username,
+        email: req.body.email,
+        subject: req.body.subject,
+        textbody: req.body.textbody
     });
-    */
-    /*
-    var filepath = __dirname.split('backend')[0]+
-        'frontend/external/Amador_Trey_Resume.pdf';
-    var outfile = 'Amador_Trey_Resume.pdf';
-    res.download(filepath,outfile,function(err) {
+    msg.save(function(err,msgs) {
         if (err) {
-            console.log('Error',err);
-        } else {
-            console.log('Success');
+            return res.send({
+                errormsg:'Datase insertion error!',
+                code:500
+            });
         }
+        return res.send({
+            messages: msgs,
+            code: 200
+        });
     });
-    return res.json(outfile);
-    */
-
-
-    //var filepath = __dirname.split('backend')[0]+
-    //    'frontend/external/Amador_Trey_Resume.pdf';
-    //var outfile = 'Amador_Trey_Resume.pdf';
-    //window.open(filepath);
-    //return res.send(filepath);
-
-    //window.open('/');
-
 });
 
 

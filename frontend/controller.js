@@ -32,6 +32,7 @@ var app = angular
                 controller: 'errorCtlr'
             });
         $locationProvider.html5Mode({ enabled: true });
+        $locationProvider.hashPrefix('');
     });
 
 
@@ -40,8 +41,27 @@ app.controller('homeCtlr', function($scope,$http) {
 });
 
 
+/*
+    <div><input type="text" ng-model="message.username" placeholder="User Name"></div>
+    <div><input type="text" ng-model="message.subject" placeholder="Subject"></div>
+    <div><input type="text" ng-model="message.textbody" placeholder="Message"></div>
+    <div><input type="text" ng-model="message.email" placeholder="E-mail (optional)"></div>
+    <div><input type="submit" ng-click="submit(message)" value="Send"></div>
+*/
 app.controller('resumeCtlr',function($scope,$http) {
-    var docs = {
+
+    var reset_input = function() {
+        $scope.message.username = '';
+        $scope.message.subject = '';
+        $scope.message.textbody = '';
+        $scope.message.email = '';
+    }
+    var reset_result = function() {
+        $scope.data_result = '';
+    }
+    reset_result();
+
+    const docs = {
         'resume':'files/Amador_Trey_Resume.pdf',
         'riverside':'files/Amador_Trey_UCR_Unofficial.pdf',
         'pomona':'files/Amador_Trey_Pomona_Unofficial.pdf',
@@ -52,6 +72,22 @@ app.controller('resumeCtlr',function($scope,$http) {
     };
     $scope.open_pdf = function(key) {
         window.open(docs[key]);
+    }
+
+    $scope.submit = function(message) {
+        var user_message = $scope.message;
+        $http.post('/user-message',user_message).then(function(res) {
+            if (res.data.code == 500) {
+                $scope.data_result = res.data.errormsg;
+            } else if (res.data.code == 200) {
+                $scope.data_result = 'Message sent!';
+                reset_input();
+            } else {
+                reset_result();
+            }
+        },function(err) {
+            $scope.data_result = 'There was a server error.';
+        });
     }
 });
 
@@ -72,8 +108,10 @@ app.controller('blogCtlr',function($scope) {
 
 
 app.controller('errorCtlr',function($scope,$http) {
-    $http.get('/404').success(function(res) {
-        $scope.code = res;
+    $http.get('/404').then(function(res) {
+        $scope.code = res.data;
+    },function(err) {
+        $scope.code = 'unknown';
     });
 });
 

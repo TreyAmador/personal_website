@@ -47,11 +47,13 @@ var slide_fade = function() {
 }
 
 
-var initialize = function() {
+//var initialize = function() {
+    
+//}
+
+
+$(document).ready(function() {
     slide_fade();
-}
-
-
-$(document).ready(initialize);
+});
 
 
