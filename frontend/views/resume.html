@@ -1,19 +1,9 @@
 <!-- about page html -->
 
-<!--
-<div class="jumbotron text-center">
-  <h1>Resume Page</h1>
-  <p>{{ message }}</p>
-</div>
--->
-
-
 <div ng-controller="resumeCtlr" class="body-wrapper">
-  
-  <!-- don't include address ? -->
+
   <div class="resume-wrapper">
     <h1 class="header">Curriculum Vitae</h1>
-
     <h2 class="education">Education</h2>
     <div class="graduate">California State Polytechnic Univesity, Pomona</div>
     <div class="post-bacc">Palomar College</div>
@@ -25,20 +15,17 @@
     <h2 class="lang-util">Languages and Utilities</h2>
     <div class="languages">C/C++, Python, JavaScript, Java</div>
     <div class="utilities">NodeJS, ExpressJS, MongoDB, MySQL</div>
-
   </div>
-  <!--<input type="button" value="Download" 
-    onclick="download('../external/Amador_Trey_Resume.pdf')" />-->
-  <!--<button class="pdf" ng-click="resume_pdf()">download a pdf resume</button>-->
-  <!--<div>
-    <a href="/resume" download="../external/Amador_Trey_Resume.pdf">
-      Download resume
-    </a>
-  </div>-->
-  <div class="pdf" ng-click="resume_pdf()">Download pdf resume</div>
-  <div class="riverside">download UC Riverside transcript</div>
-  <div class="pomona">download Cal Poly Pomona transcript</div>
+
+  <div class="resume-links">
+    <div class="pdf" ng-click="open_pdf('resume')">open pdf resume</div>
+    <div class="riverside" ng-click="open_pdf('riverside')">open riverside transcript</div>
+    <div class="pomona" ng-click="open_pdf('pomona')">open pomona transcript</div>
+    <div class="nih" ng-click="open_pdf('nih')">open nih research</div>
+    <div class="ugrj" ng-click="open_pdf('ugrj')">open undergraduate research</div>
+  </div>
+
 </div>
-<script src="../js/resume.js"></script>
+
 
 

@@ -2,6 +2,7 @@
  * routing applications
  */
 
+
 var app = angular
     .module('personalApp',['ngRoute'])
     .config(function($routeProvider,$locationProvider) {
@@ -35,26 +36,38 @@ var app = angular
 
 
 app.controller('homeCtlr', function($scope,$http) {
-    //$http.get('/home').success(function(res) {
-    //    $scope.message = res;
-    //});
+    
 });
 
 
 app.controller('resumeCtlr',function($scope,$http) {
-    $scope.resume_pdf = function() {
-        window.open('files/Amador_Trey_Resume.pdf');
+    var docs = {
+        'resume':'files/Amador_Trey_Resume.pdf',
+        'riverside':'files/Amador_Trey_UCR_Unofficial.pdf',
+        'pomona':'files/Amador_Trey_Pomona_Unofficial.pdf',
+        'nih':'https://www.ncbi.nlm.nih.gov/pmc/articles/'+
+                'PMC5013726/pdf/nihms-808778.pdf',
+        'ugrj':'http://ssp.ucr.edu/journal/volumes/'+
+                'volume7/ugrjournal-volvii_amador.pdf'
+    };
+    $scope.open_pdf = function(key) {
+        window.open(docs[key]);
     }
 });
 
 
 app.controller('demoCtlr',function($scope) {
-    $scope.message = 'Demonstrations';
+    $scope.status = construction();
 });
 
 
 app.controller('contactCtlr',function($scope) {
-    $scope.message = 'Contact us. This is a demo.'
+    $scope.status = construction();
+});
+
+
+app.controller('blogCtlr',function($scope) {
+    $scope.status = construction();
 });
 
 
@@ -63,5 +76,10 @@ app.controller('errorCtlr',function($scope,$http) {
         $scope.code = res;
     });
 });
+
+
+var construction = function() {
+    return 'this webpage is under construction';
+}
 
 
