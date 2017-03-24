@@ -1,5 +1,6 @@
 <!-- about page html -->
 
+
 <div ng-controller="resumeCtlr" class="body-wrapper">
 
   <div class="resume-wrapper">
@@ -18,14 +19,24 @@
   </div>
 
   <div class="resume-links">
-    <div class="pdf" ng-click="open_pdf('resume')">open pdf resume</div>
-    <div class="riverside" ng-click="open_pdf('riverside')">open riverside transcript</div>
-    <div class="pomona" ng-click="open_pdf('pomona')">open pomona transcript</div>
-    <div class="nih" ng-click="open_pdf('nih')">open nih research</div>
-    <div class="ugrj" ng-click="open_pdf('ugrj')">open undergraduate research</div>
+    <div class="resume" ng-click="open_pdf('resume')">
+      <span>open pdf resume</span>
+    </div>
+    <div class="riverside" ng-click="open_pdf('riverside')">
+      <span>open riverside transcript</span>
+    </div>
+    <div class="pomona" ng-click="open_pdf('pomona')">
+      <span>open pomona transcript</span>
+    </div>
+    <div class="nih" ng-click="open_pdf('nih')">
+      <span>open nih research</span>
+    </div>
+    <div class="ugrj" ng-click="open_pdf('ugrj')"><span>
+      open undergraduate research</span>
+    </div>
   </div>
 
 </div>
 
-
+<script src="../js/resume.js"></script>
 
