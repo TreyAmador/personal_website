@@ -5,6 +5,8 @@
 var express = require('express');
 var router = express.Router();
 var path = require('path');
+var mime = require('mime');
+var fs = require('fs');
 
 
 router.get('/home',function(req,res) {
@@ -15,6 +17,55 @@ router.get('/home',function(req,res) {
 /**
  * some more routing here!
  */
+router.post('/download-resume',function(req,res,next) {
+    
+    //return res.send(new Buffer('download resume'));
+
+    /*
+    var file = __dirname.split('backend')[0]+
+        'frontend/external/Amador_Trey_Resume.pdf';
+    var filename = path.basename(file);
+    var mimetype = mime.lookup(file);
+    res.set('Content-disposition','attachment; filename='+filename);
+    res.set('Content-type',mimetype);
+    var filestream = fs.createReadStream(file);
+    filestream.pipe(res);
+    */
+    /*
+    var filepath = '/external/Amador_Trey_Resume.pdf';
+    var file = 'Amador_Trey_Resume.pdf';
+    res.download(__dirname+filepath,file,function() {
+        if (err) {
+            // handle error...
+        } else {
+            // decrement download credit
+        }
+    });
+    */
+    /*
+    var filepath = __dirname.split('backend')[0]+
+        'frontend/external/Amador_Trey_Resume.pdf';
+    var outfile = 'Amador_Trey_Resume.pdf';
+    res.download(filepath,outfile,function(err) {
+        if (err) {
+            console.log('Error',err);
+        } else {
+            console.log('Success');
+        }
+    });
+    return res.json(outfile);
+    */
+
+
+    //var filepath = __dirname.split('backend')[0]+
+    //    'frontend/external/Amador_Trey_Resume.pdf';
+    //var outfile = 'Amador_Trey_Resume.pdf';
+    //window.open(filepath);
+    //return res.send(filepath);
+
+    //window.open('/');
+
+});
 
 
 router.get('/404',function(req,res,next) {
@@ -69,7 +120,6 @@ module.exports = router;
 
 /**
  * 
- * 
  * ********************************************************* *
  *                  Features to add                          *
  * ********************************************************* *
@@ -104,11 +154,10 @@ module.exports = router;
  *              see source code
  *                  github.com/TreyAmador
  *      mean stack
- *          pug view engine
+ *          pug view engine ?
  *          mongo db
  *              user scores
  *              blog posts?
- * 
  * 
  * 
  */
