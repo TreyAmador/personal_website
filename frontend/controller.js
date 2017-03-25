@@ -41,13 +41,6 @@ app.controller('homeCtlr', function($scope,$http) {
 });
 
 
-/*
-    <div><input type="text" ng-model="message.username" placeholder="User Name"></div>
-    <div><input type="text" ng-model="message.subject" placeholder="Subject"></div>
-    <div><input type="text" ng-model="message.textbody" placeholder="Message"></div>
-    <div><input type="text" ng-model="message.email" placeholder="E-mail (optional)"></div>
-    <div><input type="submit" ng-click="submit(message)" value="Send"></div>
-*/
 app.controller('resumeCtlr',function($scope,$http) {
 
     var reset_input = function() {

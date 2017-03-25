@@ -10,6 +10,7 @@ var fs = require('fs');
 
 
 var mongoose = require('mongoose');
+mongoose.Promise = global.Promise;
 mongoose.connect('mongodb://localhost:27017/personal');
 var Message = require('./models/message')(mongoose);
 
@@ -22,14 +23,6 @@ router.get('/home',function(req,res) {
 /**
  * some more routing here
  */
-
-/*
-        username: {type: String, required: true},
-        email: {type: String},
-        subject: {type: String, required: true},
-        textbody: {type: String, required: true},
-        created_at: {type: Date, default: Date.now}
-*/
 
 router.post('/user-message',function(req,res) {
     var msg = new Message({

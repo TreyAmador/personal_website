@@ -4,7 +4,6 @@
 
 
 module.exports = function(mongoose) {
-    mongoose.Promise = global.Promise;
     var MessageSchema = mongoose.Schema({
         username: {type: String, required: true},
         email: {type: String},
@@ -15,9 +14,4 @@ module.exports = function(mongoose) {
     return mongoose.model('Message',MessageSchema);
 }
 
-
-
-
-//var mongoose = require('mongoose');
-//module.exports = mongoose.model('Message',MessageSchema);
 
