@@ -23,7 +23,7 @@
 
 
 .entry-handle {
-    
+    position: fixed;
 }
 
 
@@ -69,18 +69,11 @@
 }
 
 
-
-
 .git-entry {
-    position: fixed;
     height: 400px;
     width: 400px;
-    /*
-    left: 3em;
-    top: 2em;
-    */
     left: 50%;
-    top: 2em;
+    top: 10em;
 }
 
 
@@ -95,11 +88,11 @@
 
 
 .engine-entry {
-    position: relative;
+    
     height: 300px;
     width: 300px;
-    left: 5em;
-    top: 6em;
+    left: 20%;
+    top: 50em;
 }
 
 
