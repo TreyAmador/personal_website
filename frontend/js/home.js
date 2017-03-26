@@ -54,22 +54,9 @@ var slide_fade = function() {
 }
 
 
-var pull_header = function() {
-    
-}
-
-
-
-var load_page = function() {
-    $('body').fadeIn(500);
-}
-
-
 $(document).ready(function() {
     image_scroll();
     slide_fade();
-    //
-    load_page();
 });
 
 
