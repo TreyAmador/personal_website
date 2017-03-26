@@ -3,6 +3,7 @@
 */
 
 
+
 .home-page {
     position: static;
     height: 3000px;
@@ -88,7 +89,6 @@
 
 
 .engine-entry {
-    
     height: 300px;
     width: 300px;
     left: 20%;
