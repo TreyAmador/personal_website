@@ -38,11 +38,12 @@
 
   <br>
 
-  <form class="message-form">
+  <form class="input-list list-style">
     <div>Leave a message.</div>
-    <div><input type="text" ng-model="message.username" placeholder="User Name"></div>
+    <div class="line"><input type="text" ng-model="message.username" placeholder="User Name"></div>
     <div><input type="text" ng-model="message.subject" placeholder="Subject"></div>
-    <div><input type="text" ng-model="message.textbody" placeholder="Message"></div>
+    <div class="box"><input type="text" ng-model="message.textbody" placeholder="Message"></div>
+    <!--<div> <textarea></textarea></div>-->
     <div><input type="text" ng-model="message.email" placeholder="E-mail (optional)"></div>
     <div><input type="submit" ng-click="submit(message)" value="Send"></div>
     <div>{{data_result}}</div>
