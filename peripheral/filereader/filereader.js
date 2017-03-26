@@ -3,8 +3,6 @@
 */
 
 //'use strict'
-
-
 const fs = require('fs');
 
 
@@ -44,7 +42,8 @@ FileManager.prototype.readfile = function(filepath,files) {
                     return;
                 } else {
                     // convert to html file
-                    
+                    convertHTML(data);
+                    // this aint right
                     ++resolutions;
                 }
             });
