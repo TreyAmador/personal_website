@@ -4,51 +4,68 @@
 
 //'use strict'
 
-var fs = require('fs');
+
+const fs = require('fs');
 
 
 function FileManager() {
-    //this.fs = require('fs');
-    //this.files = [];
+    // empty file manager constructor
 }
 
 
-FileManager.prototype.filedir = function(fs,path,filearr) {
+FileManager.prototype.filedir = function(path,filearr) {
     return new Promise(function(resolve,reject) {
         fs.readdir(path,function(err,files) {
             if (err) {
-                console.log('directory error');
                 reject('files not found');
             } else {
-                filearr.push.apply(filearr,files);
-                console.log('directory success');
-                console.log(filearr);
-                resolve(files);
+                filearr = files.map(function(x) {
+                    return path.concat(x);
+                });
+                resolve(filearr);
             }
         });
     });
 }
 
 
-FileManager.prototype.readfile = function(fs,files) {
+FileManager.prototype.convertHTML = function(file) {
+    
+}
+
+
+FileManager.prototype.readfile = function(filepath,files) {
     return new Promise(function(resolve,reject) {
-        files.forEach(function(file,i,files) {
-            console.log('files include',file);
-            
+        var resolutions = 0;
+        files.forEach(function(file,i) {
+            fs.readFile(file,function(err,data) {
+                if (err) {
+                    reject('files not read');
+                    return;
+                } else {
+                    // convert to html file
+                    
+                    ++resolutions;
+                }
+            });
         });
+        if (resolutions >= files.length) {
+            resolve(files);
+        }
     });
 }
 
 
 module.exports = function(req,res,next) {
-    var manager = new FileManager();
-    var filepath = './textdocs/';
     var files = [];
-    manager.filedir(fs,filepath,files)
-        .then(manager.readfile.bind(fs,files))
+    var filepath = './textdocs/';
+    var manager = new FileManager();
+    manager.filedir(filepath,files)
+        .then(manager.readfile.bind(filepath,files))
         .catch(function() {
             console.log('oh no');
         });
     next();
 }
+
 
