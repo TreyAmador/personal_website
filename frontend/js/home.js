@@ -21,7 +21,7 @@ var slide_fade = function() {
         var placard_dimension = parseInt(placard.css(dimension),10);
         return Math.abs(entry_dimension-placard_dimension)/2;
     }
-    $('.entry-handle').hover(function() {
+    $('.image-handle').hover(function() {
         var placard = $(this).find('.entry-placard');
         placard.animate({
             left:'-='+delta(this,placard,'width')+'px',
@@ -47,12 +47,24 @@ var slide_fade = function() {
 }
 
 
-//var initialize = function() {
-    
-//}
+var image_scroll = function() {
+    var poses = [];
+    $('.entry-handle').each(function(i,entry) {
+        poses.push(parseInt($(this).css('top'),10));
+    });
+    $(document).scroll(function() {
+        var window_top = window.pageYOffset;
+        $('.entry-handle').each(function(i,entry) {
+            var offset = poses[i] - window_top;
+            console.log(poses[i],window_top,offset);
+            $(this).css('top',offset);
+        });
+    });
+}
 
 
 $(document).ready(function() {
+    image_scroll();
     slide_fade();
 });
 

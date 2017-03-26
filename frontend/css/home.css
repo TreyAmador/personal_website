@@ -13,12 +13,17 @@
 }
 
 
-.entry-handle {
+.image-handle {
     position: relative;
     height: 100%;
     width: 100%;
     left: 0.5em;
     background-size: 100% 100%;
+}
+
+
+.entry-handle {
+    
 }
 
 
@@ -67,10 +72,14 @@
 
 
 .git-entry {
-    position: relative;
+    position: fixed;
     height: 400px;
     width: 400px;
+    /*
     left: 3em;
+    top: 2em;
+    */
+    left: 50%;
     top: 2em;
 }
 
