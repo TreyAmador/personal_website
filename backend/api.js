@@ -25,12 +25,14 @@ router.get('/home',function(req,res) {
  */
 
 router.post('/user-message',function(req,res) {
+
     var msg = new Message({
         username: req.body.username,
         email: req.body.email,
         subject: req.body.subject,
         textbody: req.body.textbody
     });
+
     msg.save(function(err,msgs) {
         if (err) {
             return res.send({
