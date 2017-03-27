@@ -50,7 +50,7 @@ app.controller('resumeCtlr',function($scope,$http) {
         $scope.message.email = '';
     }
     var reset_result = function() {
-        $scope.data_result = '';
+        $scope.submission_result = '';
     }
     reset_result();
 
@@ -68,18 +68,59 @@ app.controller('resumeCtlr',function($scope,$http) {
     }
 
     $scope.submit = function(message) {
+        
+
+        //var iter = $('.input-list div').children();
+        //for (var i = 0; i < iter.length; ++i) {
+        //    console.log(iter[i].attr('placeholder'));
+        //}
+
+        //$('.input-list div').each(function(input,i) {
+        //    console.log($(this).attr('placeholder'));
+        //});
+
+        /*
+        var inputs = document.getElementsByTagName('input');
+        for (var i = 0; i < inputs.length; ++i) {
+            var elem = inputs.item(i);
+            if (elem.placeholder !== 'E-mail' &&
+                elem && elem.value) {
+
+                }
+        }
+        */
+        var inputs = document.getElementsByTagName('input');
+        var textareas = document.getElementsByTagName('textarea');
+        for (var i = 0; i < inputs.length; ++i) {
+            if (inputs.item(i) && inputs.item(i).value) {
+                console.log(inputs.item(i).placeholder);
+            }
+        }
+        for (var i = 0; i < textareas.length; ++i) {
+            if (textareas.item(i) && textareas.item(i).value) {
+                console.log(textareas.item(i).placeholder);
+            }
+        }
+        /*
+        if (el !== null && el.value === "")
+{
+  //The element was found and the value is empty.
+}
+        */
+
+
         var user_message = $scope.message;
         $http.post('/user-message',user_message).then(function(res) {
-            if (res.data.code == 500) {
-                $scope.data_result = res.data.errormsg;
+            if (res.data.code == 500 || res.data.code == 422) {
+                $scope.submission_result = res.data.errormsg;
             } else if (res.data.code == 200) {
-                $scope.data_result = 'Message sent!';
+                $scope.submission_result = 'Message sent!';
                 reset_input();
             } else {
                 reset_result();
             }
         },function(err) {
-            $scope.data_result = 'There was a server error.';
+            $scope.submission_result = 'There was a server error.';
         });
     }
 });
