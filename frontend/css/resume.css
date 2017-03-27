@@ -21,6 +21,68 @@
 
 
 
+
+textarea, input {
+    box-sizing: border-box;
+    width: 300px;
+}
+
+
+.input-list div input {
+    display: block;
+    padding: 0;
+    margin: 0;
+}
+
+
+.input-list div textarea {
+    display: block;
+    height: 5em;
+    resize: vertical;
+    padding: 0;
+    margin: 0;
+}
+
+
+
+/*
+.input-list {
+    padding: 0;
+    margin: 0;
+    width: 8px;
+}
+
+
+.input-list div {
+    display: block;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+
+.input-list div input {
+    display: block;
+    padding: 0;
+    margin: 0;
+}
+
+
+.input-list div textarea {
+    display: block;
+    height: 5em;
+    resize: vertical;
+    padding: 0;
+    margin: 0;
+}
+
+
+
+
+
+
+/*
+
 input[type="text"] {
     display: block;
     margin: 0;
@@ -41,11 +103,13 @@ input[type="text"]:focus {
   padding: 10px;
   border: solid 5px #c9c9c9;
   transition: border 0.3s;
+  margin: 3px;
 }
 .list-style input[type="text"]:focus,
 .list-style input[type="text"].focus {
   border: solid 5px #969696;
 }
 
+*/
 
 
