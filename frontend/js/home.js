@@ -34,22 +34,22 @@ var slide_fade = function() {
             left:'-='+delta(this,placard,'width')+'px',
             top:'+='+delta(this,placard,'height')+'px',
             opacity:'0.8'
-        },150,'linear');
+        },300,'linear');
         $(this).find('.entry-headline').animate({
             left:'+='+delta(this,placard,'width')+'px',
             opacity:'1.0'
-        },150,'linear');
+        },300,'linear');
     },function() {
         var placard = $(this).find('.entry-placard');
         placard.animate({
             left:'+='+delta(this,placard,'width')+'px',
             top:'-='+delta(this,placard,'height')+'px',
             opacity:'0.0'
-        },200,'linear');
+        },300,'linear');
          $(this).find('.entry-headline').animate({
             left:'-='+delta(this,placard,'width')+'px',
             opacity:'0.0'
-        },200,'linear');
+        },300,'linear');
     });
 }
 

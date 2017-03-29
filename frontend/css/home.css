@@ -13,6 +13,31 @@
 }
 
 
+
+.home-directory-outer {
+    position: relative;
+    top: 6em;
+    left: 0em;
+    width: 100%;
+    height: 20px;
+}
+
+
+.home-directory {
+    position: relative;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    top: 0em;
+    left: 10%;
+}
+
+
+.home-directory a {
+    text-decoration: none;
+    padding: 10px;
+    color: #000000;
+}
+
+
 .image-handle {
     position: relative;
     height: 100%;
@@ -24,6 +49,11 @@
 
 .entry-handle {
     position: fixed;
+}
+
+
+.image-handle a {
+    text-decoration: none;
 }
 
 
@@ -69,6 +99,7 @@
 }
 
 
+/*
 .git-entry {
     height: 400px;
     width: 400px;
@@ -86,14 +117,14 @@
     text-decoration: none;
 }
 
-
+*/
 
 
 .engine-entry {
     height: 40em;
     width: 40em;
-    left: 10%;
-    top: 10em;
+    left: 20%;
+    top: 20em;
 }
 
 
@@ -102,16 +133,53 @@
 }
 
 
-.engine-entry-image a {
-    text-decoration: none;
+.trader-entry {
+    height: 30em;
+    width: 42.8em;
+    left: 40%;
+    top: 75em;
 }
 
 
+.trader-entry-image {
+    background-image: url("../img/corner04.png");
+}
 
 
+.robot-entry {
+    height: 35em;
+    width: 35em;
+    left: 10%;
+    top: 120em;
+}
 
 
+.robot-entry-image {
+    background-image: url("../img/robosim.jpg");
+}
 
+
+.asteroids-entry {
+    height: 30em;
+    width: 44em;
+    left: 50%;
+    top: 130em;
+}
+
+
+.asteroids-entry-image {
+    background-image: url("../img/asteroid02.png");
+}
+
+
+.drum-entry {
+
+}
+
+
+.drum-entry-image {
+    
+}
 
 
 
