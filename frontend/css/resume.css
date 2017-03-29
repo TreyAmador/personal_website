@@ -3,12 +3,51 @@
 */
 
 
+body {
+    height: 3000px;
+}
+
+
+.resume-wrapper {
+    margin: 3em;
+    background-color: white;
+    z-index: 10;
+}
+
+
+.resume-wrapper h1 {
+    left: 0;
+
+    text-align: center;
+}
+
+
+.row {
+    
+}
+
+
+.col-1 {
+    float: left;
+    text-align: left;
+    margin: 0px;
+    width: 20%;
+}
+
+
+.col-2 {
+    float: left;
+    text-justify: left;
+    margin: 0px;
+    width: 80%;
+}
+
 
 .resume-links div {
     /*margin: 3px;*/
 }
 
-/* ffa500 */
+
 .resume-links div span {
     border-bottom: 1px solid rgba(0,0,0,0.0);
     transition: border 200ms ease;
@@ -25,6 +64,22 @@
 textarea, input {
     box-sizing: border-box;
     width: 300px;
+}
+
+
+.message-wrapper {
+    position: relative;
+    top: 2em;
+    left: 2em;
+    width: 25em;
+    height: 15em;
+    background-color: #dddddd;
+}
+
+
+.input-list {
+    position: relative;
+    
 }
 
 
@@ -49,77 +104,5 @@ textarea, input {
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
 }
-
-
-
-
-
-
-/*
-
-.input-list {
-    padding: 0;
-    margin: 0;
-    width: 8px;
-}
-
-
-.input-list div {
-    display: block;
-    font-family: Arial, Helvetica, sans-serif;
-    padding: 0;
-    margin: 0;
-}
-
-
-.input-list div input {
-    display: block;
-    padding: 0;
-    margin: 0;
-}
-
-
-.input-list div textarea {
-    display: block;
-    height: 5em;
-    resize: vertical;
-    padding: 0;
-    margin: 0;
-}
-
-*/
-
-
-
-/*
-
-input[type="text"] {
-    display: block;
-    margin: 0;
-    width: 100%;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 18px;
-    box-shadow: none;
-    border-radius: none;
-}
-
-
-input[type="text"]:focus {
-    outline: none;
-}
-
-
-.list-style input[type="text"] {
-  padding: 10px;
-  border: solid 5px #c9c9c9;
-  transition: border 0.3s;
-  margin: 3px;
-}
-.list-style input[type="text"]:focus,
-.list-style input[type="text"].focus {
-  border: solid 5px #969696;
-}
-
-*/
 
 

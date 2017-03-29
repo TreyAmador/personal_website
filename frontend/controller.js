@@ -52,7 +52,6 @@ app.controller('resumeCtlr',function($scope,$http) {
     var reset_result = function() {
         $scope.submission_result = '';
     }
-    //reset_result();
 
     const docs = {
         'resume':'files/Amador_Trey_Resume.pdf',
@@ -76,7 +75,6 @@ app.controller('resumeCtlr',function($scope,$http) {
                 proper_input = false;
             }
         });
-
         if (proper_input) {
             var user_message = $scope.message;
             $http.post('/user-message',user_message).then(function(res) {
