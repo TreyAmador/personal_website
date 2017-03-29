@@ -4,6 +4,16 @@
 
 
 
+var anchor_listener = function() {
+    $('.home-directory a').click(function() {
+        var anchor_name = $(this).attr('name');
+        $('html,body').animate({
+            'scrollTop': $('#'+anchor_name).offset().top
+        },2000);
+    });
+}
+
+
 var image_scroll = function() {
     var poses = [];
     $('.entry-handle').each(function(i,entry) {
@@ -55,8 +65,9 @@ var slide_fade = function() {
 
 
 $(document).ready(function() {
+    anchor_listener();
     image_scroll();
-    slide_fade();
+    slide_fade();    
 });
 
 
