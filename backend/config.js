@@ -18,9 +18,10 @@ module.exports = function(express) {
     app.use(bodyParser.urlencoded({extended: false}));
     app.use(cookieParser());
     app.use(express.static(path.join(__dirname,'../frontend')));
-    app.use(favicon(path.join(__dirname,'../frontend','img','console.png')));
+    app.use(favicon(path.join(__dirname,'../frontend','img','mesh.png')));
     app.use('/',api);
 
     return app;
+    
 }
 

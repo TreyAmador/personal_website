@@ -176,7 +176,7 @@
 
 .footer-outer {
     position: relative;
-    width: 90%;
+    width: 100%;
     height: 20px;
     top: 3500px;
 }
@@ -185,7 +185,7 @@
 .footer {
     position: absolute;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    left: 70%;
+    right: 20%;
 }
 
 
