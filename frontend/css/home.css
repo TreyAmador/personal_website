@@ -5,7 +5,7 @@
 
 .home-page {
     position: static;
-    height: 4400px;
+    height: 3600px;
     margin: 0;
     padding: 0;
     z-index: -100;
@@ -97,8 +97,8 @@
 
 
 .engine-entry {
-    height: 40em;
-    width: 40em;
+    height: 30em;
+    width: 30em;
     left: 20%;
     top: 20em;
 }
@@ -110,10 +110,10 @@
 
 
 .trader-entry {
-    height: 30em;
-    width: 42.8em;
+    height: 25em;
+    width: 35em;
     left: 40%;
-    top: 75em;
+    top: 65em;
 }
 
 
@@ -123,10 +123,10 @@
 
 
 .robot-entry {
-    height: 35em;
-    width: 35em;
-    left: 10%;
-    top: 120em;
+    height: 20em;
+    width: 20em;
+    left: 12%;
+    top: 100em;
 }
 
 
@@ -136,10 +136,10 @@
 
 
 .asteroids-entry {
-    height: 30em;
-    width: 44em;
+    height: 25em;
+    width: 36em;
     left: 50%;
-    top: 130em;
+    top: 105em;
 }
 
 
@@ -149,10 +149,10 @@
 
 
 .drum-entry {
-    height: 35em;
-    width: 35em;
-    left: 50%;
-    top: 180em;
+    height: 25em;
+    width: 25em;
+    left: 45%;
+    top: 145em;
 }
 
 
@@ -162,10 +162,10 @@
 
 
 .git-entry {
-    height: 300px;
-    width: 300px;
+    height: 20em;
+    width: 20em;
     left: 30%;
-    top: 230em;
+    top: 180em;
 }
 
 
@@ -178,14 +178,14 @@
     position: relative;
     width: 90%;
     height: 20px;
-    top: 4300px;
+    top: 3500px;
 }
 
 
 .footer {
     position: absolute;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    left: 30%;
+    left: 70%;
 }
 
 
