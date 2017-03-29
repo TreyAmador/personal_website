@@ -5,20 +5,17 @@
 
 .home-page {
     position: static;
-    height: 3000px;
-    width: 100%;
+    height: 4400px;
     margin: 0;
     padding: 0;
     z-index: -100;
 }
 
 
-
 .home-directory-outer {
     position: relative;
     top: 6em;
-    left: 0em;
-    width: 100%;
+    width: 90%;
     height: 20px;
 }
 
@@ -99,27 +96,6 @@
 }
 
 
-/*
-.git-entry {
-    height: 400px;
-    width: 400px;
-    left: 50%;
-    top: 10em;
-}
-
-
-.git-entry-image {
-    background-image: url("../img/avatar.png");
-}
-
-
-.git-entry-image a {
-    text-decoration: none;
-}
-
-*/
-
-
 .engine-entry {
     height: 40em;
     width: 40em;
@@ -173,13 +149,49 @@
 
 
 .drum-entry {
-
+    height: 35em;
+    width: 35em;
+    left: 50%;
+    top: 180em;
 }
 
 
 .drum-entry-image {
-    
+    background-image: url("../img/drums.jpg");
 }
 
+
+.git-entry {
+    height: 300px;
+    width: 300px;
+    left: 30%;
+    top: 230em;
+}
+
+
+.git-entry-image {
+    background-image: url("../img/avatar.png");
+}
+
+
+.footer-outer {
+    position: relative;
+    width: 90%;
+    height: 20px;
+    top: 4300px;
+}
+
+
+.footer {
+    position: absolute;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    left: 30%;
+}
+
+
+.footer span {
+    padding: 20px;
+    
+}
 
 
