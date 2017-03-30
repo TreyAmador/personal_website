@@ -11,10 +11,6 @@ var app = angular
                 templateUrl: 'views/home.html',
                 controller: 'homeCtlr'
             })
-            //.when('/resume', {
-            //    templateUrl: 'views/resume.html',
-            //    controller: 'resumeCtlr'
-            //})
             .when('/about', {
                 templateUrl: 'views/about.html',
                 controller: 'aboutCtlr'
@@ -45,8 +41,20 @@ app.controller('homeCtlr', function($scope,$http) {
 });
 
 
-
 app.controller('aboutCtlr',function($scope,$http) {
+
+    const docs = {
+        'resume':'files/Amador_Trey_Resume.pdf',
+        'riverside':'files/Amador_Trey_UCR_Unofficial.pdf',
+        'pomona':'files/Amador_Trey_Pomona_Unofficial.pdf',
+        'nih':'https://www.ncbi.nlm.nih.gov/pmc/articles/'+
+                'PMC5013726/pdf/nihms-808778.pdf',
+        'ugrj':'http://ssp.ucr.edu/journal/volumes/'+
+                'volume7/ugrjournal-volvii_amador.pdf'
+    };
+    $scope.open_pdf = function(key) {
+        window.open(docs[key]);
+    }
     
 });
 
