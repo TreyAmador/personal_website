@@ -11,9 +11,13 @@ var app = angular
                 templateUrl: 'views/home.html',
                 controller: 'homeCtlr'
             })
-            .when('/resume', {
-                templateUrl: 'views/resume.html',
-                controller: 'resumeCtlr'
+            //.when('/resume', {
+            //    templateUrl: 'views/resume.html',
+            //    controller: 'resumeCtlr'
+            //})
+            .when('/about', {
+                templateUrl: 'views/about.html',
+                controller: 'aboutCtlr'
             })
             .when('/demo', {
                 templateUrl: 'views/demo.html',
@@ -40,6 +44,14 @@ app.controller('homeCtlr', function($scope,$http) {
     
 });
 
+
+
+app.controller('aboutCtlr',function($scope,$http) {
+    
+});
+
+
+/*
 
 app.controller('resumeCtlr',function($scope,$http) {
 
@@ -92,6 +104,8 @@ app.controller('resumeCtlr',function($scope,$http) {
         }
     }
 });
+
+*/
 
 
 app.controller('demoCtlr',function($scope) {

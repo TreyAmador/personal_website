@@ -3,6 +3,61 @@
 */
 
 
+.introduction {
+    position: relative;
+    top: 7em;
+    width: 75%;
+    margin: 0 auto;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+
+.self-portrait {
+    border-radius: 50%;
+    width: 30em;
+    height: 30em;
+    margin: 0 auto;
+    background-size: 30em 30em;
+    background-image: url("../img/self-washed-out.jpg");
+}
+
+
+.description-wrapper {
+    font-size: 1.3em;
+    
+}
+
+
+.col-1 {
+    float: left;
+    padding: 0 1% 0 1%;
+    margin: 0;
+    width: 48%;
+}
+
+
+.col-2 {
+    float: right;
+    padding: 0 1% 0 1%;
+    margin: 0;
+    width: 48%;
+}
+
+
+
+
+/*
+.about-wrapper div {
+    position: relative;
+    top: 0px;
+    left: 0px;
+}
+*/
+
+
+
+/*
+
 body {
     height: 3000px;
 }
@@ -44,7 +99,7 @@ body {
 
 
 .resume-links div {
-    /*margin: 3px;*/
+    
 }
 
 
@@ -105,4 +160,5 @@ textarea, input {
     font-family: Arial, Helvetica, sans-serif;
 }
 
+*/
 

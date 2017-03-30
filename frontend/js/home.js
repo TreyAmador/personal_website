@@ -5,7 +5,7 @@
 
 
 var anchor_listener = function() {
-    var from_top = 15;
+    var from_top = 60;
     $('.home-directory a').click(function() {
         var anchor_name = $(this).attr('name');
         var distance = $('#'+anchor_name).offset().top-from_top;
