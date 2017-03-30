@@ -5,13 +5,13 @@
 
 .about-wrapper {
     position: relative;
-    height: 1100px;
+    height: 1000px;
 }
 
 
 .introduction {
     position: relative;
-    top: 7em;
+    top: 3em;
     width: 75%;
     margin: 0 auto;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -58,7 +58,7 @@
 
 .resume-directory {
     position: absolute;
-    top: 60em;
+    top: 53em;
     right: 15em;
     float: right;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
