@@ -5,11 +5,13 @@
 
 
 var anchor_listener = function() {
+    var from_top = 15;
     $('.home-directory a').click(function() {
         var anchor_name = $(this).attr('name');
+        var distance = $('#'+anchor_name).offset().top-from_top;
         $('html,body').animate({
-            'scrollTop': $('#'+anchor_name).offset().top
-        },2000);
+            'scrollTop': distance
+        },distance);
     });
 }
 
