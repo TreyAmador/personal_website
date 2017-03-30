@@ -16,7 +16,7 @@ var addEvent = function(object,type,callback) {
 
 
 var cursor = function() {
-    $('.resume-links div span').hover(function() {
+    $('.resume-directory nav a').hover(function() {
         $(this).css('cursor','pointer');
     });
 }
