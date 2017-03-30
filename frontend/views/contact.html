@@ -11,10 +11,10 @@
       <input type="text" ng-model="message.subject" placeholder="Subject">
     </div>
     <div>
-      <textarea ng-model="message.textbody" placeholder="Message"></textarea>
+      <input type="text" ng-model="message.email" placeholder="E-mail (optional)">
     </div>
     <div>
-      <input type="text" ng-model="message.email" placeholder="E-mail (optional)">
+      <textarea ng-model="message.textbody" placeholder="Message"></textarea>
     </div>
     <div>
       <input type="submit" ng-click="submit(message)" value="Send">
