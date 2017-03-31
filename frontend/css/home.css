@@ -5,7 +5,7 @@
 
 .home-page {
     position: static;
-    height: 3600px;
+    height: 3000px;
     margin: 0;
     padding: 0;
     z-index: -100;
@@ -41,163 +41,131 @@
 }
 
 
-.image-handle {
+.grid-container {
     position: relative;
-    height: 100%;
-    width: 100%;
-    left: 0.5em;
-    background-size: 100% 100%;
+    margin: 0 auto;
+    width: 80%;
+    top: 12em;
 }
 
 
 .entry-handle {
-    position: fixed;
+    background-size: cover;
 }
 
 
-.image-handle a {
-    text-decoration: none;
+.cengine {
+    background-image: url("../img/cengine02.png");
+    margin: 1% 2% 1% 2%;
+    height: 800px;
+    width: 96%;
+    background-position: 50% 50%;
+    float: left;
+}
+
+
+.trader {
+    background-image: url("../img/corner01.png");
+    margin: 1% 1% 1% 2%;
+    height: 400px;
+    width: 58%;
+    background-position: 100% 50%;
+    float: left;
+}
+
+
+.robot {
+    background-image: url("../img/robosim.jpg");
+    margin: 1% 2% 1% 1%;
+    height: 400px;
+    width: 36%;
+    background-position: 50% 50%;
+    float: right;
+}
+
+
+.asteroids {
+    background-image: url("../img/asteroid01.png");
+    margin: 1% 2% 1% 2%;
+    height: 500px;
+    width: 96%;
+    background-position: 50% 100%;
+    float: left;
+}
+
+
+.drum {
+    background-image: url("../img/drums.jpg");
+    margin: 1% 1% 1% 2%;
+    height: 400px;
+    width: 38%;
+    background-position: 0% 50%;
+    float: left;
+}
+
+
+.git {
+    background-image: url("../img/avatar.png");
+    background-size: cover;
+    width: 56%;
+    height: 400px;
+    margin: 1% 2% 1% 1%;
+    background-position: 50% 50%;
+    float: right;
 }
 
 
 .entry-placard {
     position: relative;
-    height: 90%;
-    width: 90%;
-    top: 0;
-    left: 10%;
+    height: 100%;
+    width: 100%;
+    top: 0%;
+    left: 0%;
     background-color: #ffffff;
     opacity: 0.0;
+    text-decoration: none;
 }
 
 
-.entry-text {
-    position: relative;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    bottom: 2em;
-    transform: rotate(270deg);
-    transform-origin: left bottom;
-}
-
-
-.entry-title {
-    font-size: 1.2em;
-    font-weight: bold;
-}
-
-
-.entry-description {
-    font-size: 1.2em;
-}
-
-
-.entry-headline {
+.entry-banner {
     position: relative;
     left: 1em;
-    bottom: 1em;
+    bottom: 3em;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 1.5em;
+    text-decoration: none;
     color: #000000;
     opacity: 0.0;
+    transform: rotate(270deg);
+    transform-origin: left bottom;
+    border-bottom: none;
 }
 
 
-.engine-entry {
-    height: 30em;
-    width: 30em;
-    left: 20%;
-    top: 20em;
+.entry-banner .header {
+    font-size: 1.2em;
 }
 
 
-.engine-entry-image {
-    background-image: url("../img/cengine02.png");
+.entry-banner .description {
+    font-size: 1.0em;
 }
 
 
-.trader-entry {
-    height: 25em;
-    width: 35em;
-    left: 40%;
-    top: 65em;
+a {
+    text-decoration: none;
 }
 
 
-.trader-entry-image {
-    background-image: url("../img/corner04.png");
-}
-
-
-.robot-entry {
-    height: 20em;
-    width: 20em;
-    left: 12%;
-    top: 100em;
-}
-
-
-.robot-entry-image {
-    background-image: url("../img/robosim.jpg");
-}
-
-
-.asteroids-entry {
-    height: 25em;
-    width: 36em;
-    left: 50%;
-    top: 105em;
-}
-
-
-.asteroids-entry-image {
-    background-image: url("../img/asteroid02.png");
-}
-
-
-.drum-entry {
-    height: 25em;
-    width: 25em;
-    left: 45%;
-    top: 145em;
-}
-
-
-.drum-entry-image {
-    background-image: url("../img/drums.jpg");
-}
-
-
-.git-entry {
-    height: 20em;
-    width: 20em;
-    left: 30%;
-    top: 180em;
-}
-
-
-.git-entry-image {
-    background-image: url("../img/avatar.png");
-}
-
-
-.footer-outer {
+.footer-wrapper {
     position: relative;
-    width: 100%;
+    float: right;
+    right: 10%;
+    bottom: 4em;
+    width: 40%;
     height: 20px;
-    top: 3500px;
-}
-
-
-.footer {
-    position: absolute;
+    padding: 0px;
+    margin: 0px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    right: 20%;
+    font-size: 1em;
 }
-
-
-.footer span {
-    padding: 20px;
-    
-}
-
 
