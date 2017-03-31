@@ -1,0 +1,71 @@
+
+
+.demo-wrapper {
+    position: relative;
+    top: 100px;
+    left: 30px;
+    width: 100%;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+
+.cengine-container {
+    width: 75%;
+    margin: 0 auto;
+}
+
+
+.cengine-title {
+    font-size: 2em;
+    text-align: center;
+    padding: 2em 2em;
+}
+
+
+.cengine-container video {
+    position: relative;
+    width: 100%;
+}
+
+
+.cengine-container .cengine-description {
+    position: relative;
+    padding: 2em 1% 2em 1%;
+    width: 98%;
+    font-size: 1.2em;
+}
+
+
+
+
+
+.trader-container {
+    width: 60%;
+    margin: 0 auto;
+}
+
+
+.trader-title {
+    font-size: 2em;
+    text-align: center;
+    padding: 2em 2em;
+}
+
+
+.trader-container video {
+    position: relative;
+    width: 100%;
+}
+
+
+.trader-container .trader-description {
+    position: relative;
+    padding: 2em 1% 2em 1%;
+    width: 98%;
+    font-size: 1.2em;
+}
+
+
+
+
+

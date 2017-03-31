@@ -19,6 +19,10 @@ var app = angular
                 templateUrl: 'views/democengine.html',
                 controller: 'demoCtlr'
             })
+            .when('/trader', {
+                templateUrl: 'views/demotrader.html',
+                controller: 'demoCtlr'
+            })
             .when('/blog', {
                 templateUrl: 'views/blog.html',
                 controller: 'blogCtlr'
