@@ -58,11 +58,19 @@
 }
 
 
-.input-list div input[type=text]:focus, textarea:focus {
-    border-bottom: 1px solid #000000;
+.input-list div input[type=submit] {
+    background-color: #dddddd;
 }
 
 
+.input-list div input[type=submit]:active {
+    background-color: #ccaa99;
+}
+
+
+.input-list div input[type=text]:focus {
+    border-bottom: 1px solid #000000;
+}
 
 
 
