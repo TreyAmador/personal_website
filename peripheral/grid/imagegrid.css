@@ -1,0 +1,107 @@
+
+
+body, html {
+    padding: 0;
+    margin: 0;
+}
+
+
+.grid-wrapper {
+    position: relative;
+    top: 3em;
+    width: 80%;
+    height: 3000px;
+    margin: 0 auto;
+}
+
+
+.header nav a {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1.5em;
+    padding: 2em;
+}
+
+
+.grid-container {
+    position: relative;
+    margin: 0 auto;
+    width: 100%;
+    top: 20em;
+}
+
+
+.cengine-row {
+    background-image: url("img/cengine02.png");
+    background-size: cover;
+    width: 96%;
+    margin: 1% 2% 1% 2%;
+    height: 800px;
+    background-position: 0px 50%;
+    float: left;
+}
+
+
+.trader-row {
+   background-image: url("img/corner01.png");
+    background-size: cover;
+    width: 58%;
+    height: 400px;
+    margin: 1% 1% 1% 2%;
+    background-position: 0px 0%;
+    float: left;
+}
+
+
+.robot-row {
+    background-image: url("img/robosim.jpg");
+    background-size: cover;
+    width: 36%;
+    height: 400px;
+    margin: 1% 2% 1% 1%;
+    background-position: 0 50%;
+    float: right;
+}
+
+
+.asteroids-row {
+    background-image: url("img/asteroid01.png");
+    background-size: cover;
+    width: 96%;
+    height: 500px;
+    margin: 1% 2% 1% 2%;
+    background-position: 0 100%;
+    float: left;
+}
+
+
+.drum-row {
+    background-image: url("img/drums.jpg");
+    background-size: cover;
+    width: 47%;
+    height: 400px;
+    margin: 1% 1% 1% 2%;
+    background-position: 0 50%;
+    float: left;
+}
+
+
+.git-row {
+    background-image: url("img/avatar.png");
+    background-size: cover;
+    width: 47%;
+    height: 400px;
+    margin: 1% 2% 1% 1%;
+    background-position: 0 50%;
+    float: right;
+}
+
+
+.footer {
+    position: relative;
+    float: left;
+    bottom: 20px;
+    left: 10%;
+    width: 90%;
+}
+
+
