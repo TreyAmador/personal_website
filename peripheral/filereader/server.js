@@ -5,14 +5,18 @@
 
 var express = require('express');
 var app = express();
-var reader = require('./filereader');
+var path = require('path');
+var reader = require('./backend/filereader');
 
 
-app.use(reader);
+app.use(express.static(path.join(__dirname, 'public')));
+app.get('/blog',reader,function(req,res) {
+    res.send('blog');
+});
 
 
 app.get('/',function(req,res) {
-    res.send('bleeeh');
+    res.send('Hey there');
 });
 
 

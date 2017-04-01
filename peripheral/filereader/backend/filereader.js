@@ -72,38 +72,88 @@ module.exports = function(req,res,next) {
 */
 
 
+
+
+/*
+module.exports = function(options) {
+    return function(req,res,next) {
+        var files = [];
+        filedir(files)
+            .then(readfiles.bind(files))
+            .catch(direrror);
+        next();
+    }
+}
+*/
+
+
+
+
+//var $ = require('jquery');
 var fs = require('fs');
 
 
 var filedir = function(files) {
-    var filepath = './textdocs/';
+    var filepath = './backend/textdocs/';
     return new Promise(function(resolve,reject) {
         fs.readdir(filepath,function(err,res) {
             if (err) {
                 reject('Files not found');
             } else {
-                files = res.map(function(file) {
-                    return filepath.concat(file);
-                });
-                console.log(files);
-                resolve('File list:',files);
+                for (var i = 0; i < res.length; ++i)
+                    files.push(filepath.concat(res[i]));
+                resolve(files);
             }
         });
     });
 }
 
 
+var fileread = function(file,data) {
+    return new Promise(function(resolve,reject) {
+        fs.readFile(file,function(err,buffer) {
+            if (err) {
+                reject(file+' not read');
+            } else {
+                data = buffer;
+                resolve(data);
+            }
+        });
+    });
+}
+
+
+var convertHTML = function(data) {
+    console.log(data);
+
+}
+
+
+var readfiles = function(files) {
+    for (var i = 0; i < files.length; ++i) {
+        var data = [];
+        fileread(files[i],data)
+            .then(convertHTML.bind(data))
+            .catch(fileerror.bind(files[i]));
+    }
+}
+
+
+var direrror = function() {
+    console.log('Files not found in directory.');
+}
+
+
+var fileerror = function(file) {
+    console.log('Error reading ' + file + '.');
+}
+
 
 module.exports = function(req,res,next) {
-
     var files = [];
-    filedir(files).then(function() {
-        console.log(files);
-    }).catch(function() {
-        console.log('error');
-    });
-    
-
+    filedir(files)
+        .then(readfiles.bind(files))
+        .catch(direrror);
     next();
 }
 
