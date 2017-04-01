@@ -2,99 +2,12 @@
     reads files
 */
 
-/*
 
-//'use strict'
-const fs = require('fs');
-
-
-function FileManager() {
-    // empty file manager constructor
-}
-
-
-FileManager.prototype.filedir = function(path,filearr) {
-    return new Promise(function(resolve,reject) {
-        fs.readdir(path,function(err,files) {
-            if (err) {
-                reject('files not found');
-            } else {
-                filearr = files.map(function(x) {
-                    return path.concat(x);
-                });
-                resolve(filearr);
-            }
-        });
-    });
-}
-
-
-FileManager.prototype.convertHTML = function(file) {
-    
-}
-
-
-FileManager.prototype.readfile = function(filepath,files) {
-    return new Promise(function(resolve,reject) {
-        var resolutions = 0;
-        files.forEach(function(file,i) {
-            fs.readFile(file,function(err,data) {
-                if (err) {
-                    reject('files not read');
-                    return;
-                } else {
-                    // convert to html file
-                    //convertHTML(data);
-                    // this aint right
-                    ++resolutions;
-                }
-            });
-        });
-        if (resolutions >= files.length) {
-            resolve(files);
-        }
-    });
-}
-
-
-module.exports = function(req,res,next) {
-    var files = [];
-    var filepath = './textdocs/';
-    var manager = new FileManager();
-    manager.filedir(filepath,files)
-        .then(manager.readfile.bind(filepath,files))
-        .catch(function() {
-            console.log('oh no');
-        });
-    next();
-}
-
-*/
-
-
-
-
-/*
-module.exports = function(options) {
-    return function(req,res,next) {
-        var files = [];
-        filedir(files)
-            .then(readfiles.bind(files))
-            .catch(direrror);
-        next();
-    }
-}
-*/
-
-
-
-
-//var $ = require('jquery');
 var fs = require('fs');
 
 
 var filedir = function(files) {
-    var filepath = './backend/textdocs/';
+    var filepath = './backend/posts/';
     return new Promise(function(resolve,reject) {
         fs.readdir(filepath,function(err,res) {
             if (err) {
@@ -123,8 +36,9 @@ var fileread = function(file,data) {
 }
 
 
+// change this to a docx?
 var convertHTML = function(data) {
-    console.log(data);
+    var text = data.toString();
 
 }
 
@@ -157,5 +71,34 @@ module.exports = function(req,res,next) {
     next();
 }
 
+
+/*
+// change this to a docx?
+var convertHTML = function(data) {
+    var text = data.toString().replace(reline,'');
+    var title = delimit(text,retitle);
+    var sub = delimit(text,resub);
+    var para = delimit(text,repara);
+    console.log(title,sub,para);
+}
+
+const retitle = new RegExp( '(.*)<title>(.*)<title>(.*)','g');
+const resub = new RegExp('(.*)<sub>(.*)<sub>(.*)','g');
+//const repara = new RegExp('(.*)<p>(.*)<p>(.*)','g');
+const repara = /(.*)<p>(.*)<p>(.*)/g;
+const reline = new RegExp('\r|\n|\r\n','g');
+
+var delimit = function(text,regex) {
+    var sections = [],
+        res;
+    while(res = regex.exec(text)) {
+        if (res) {
+            sections.push(res[2]);
+        }
+    }
+    return sections;
+}
+
+*/
 
 
