@@ -2,6 +2,8 @@
     reads files
 */
 
+/*
+
 //'use strict'
 const fs = require('fs');
 
@@ -42,7 +44,7 @@ FileManager.prototype.readfile = function(filepath,files) {
                     return;
                 } else {
                     // convert to html file
-                    convertHTML(data);
+                    //convertHTML(data);
                     // this aint right
                     ++resolutions;
                 }
@@ -66,5 +68,44 @@ module.exports = function(req,res,next) {
         });
     next();
 }
+
+*/
+
+
+var fs = require('fs');
+
+
+var filedir = function(files) {
+    var filepath = './textdocs/';
+    return new Promise(function(resolve,reject) {
+        fs.readdir(filepath,function(err,res) {
+            if (err) {
+                reject('Files not found');
+            } else {
+                files = res.map(function(file) {
+                    return filepath.concat(file);
+                });
+                console.log(files);
+                resolve('File list:',files);
+            }
+        });
+    });
+}
+
+
+
+module.exports = function(req,res,next) {
+
+    var files = [];
+    filedir(files).then(function() {
+        console.log(files);
+    }).catch(function() {
+        console.log('error');
+    });
+    
+
+    next();
+}
+
 
 
