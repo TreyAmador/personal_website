@@ -3,7 +3,7 @@
 .demo-wrapper {
     position: relative;
     top: 100px;
-    left: 30px;
+    left: 0px;
     width: 100%;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
@@ -66,6 +66,25 @@
 }
 
 
+.demo-directory {
+    position: relative;
+    padding: 2em;
+    margin: 0 auto;
+    color: #000000;
+    width: 50%;
+    height: 20px;
+    bottom: 0px;
+    left: 0px;
+}
 
+
+.demo-directory .left-demo {
+    float: left;
+}
+
+
+.demo-directory .right-demo {
+    float: right;
+}
 
 

@@ -70,7 +70,30 @@ app.controller('aboutCtlr',function($scope,$http) {
 
 
 app.controller('demoCtlr',function($scope) {
-    $scope.status = construction();
+    
+    const urls = [
+        '/cengine',
+        '/trader',
+        '/asteroids',
+        '/robot',
+        '/drum'
+    ];
+    var length = urls.length;
+
+    // check this more and more!
+    var load_directory = function() {
+        var http = $(location).attr('href').split('/').pop();
+        var i = urls.indexOf('/'+http);
+        var prev = (i-1 + length) % length,
+            next = (i+1) % length;
+        $('.left-demo').html(
+            '<a href=\"'+urls[prev]+'\">'+'Left Demo'+'</a>');
+        $('.right-demo').html(
+            '<a href=\"'+urls[next]+'\">'+'Right Demo'+'</a>');
+    }
+
+    load_directory();
+
 });
 
 

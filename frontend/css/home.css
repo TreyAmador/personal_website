@@ -5,7 +5,7 @@
 
 .home-page {
     position: static;
-    height: 2700px;
+    height: 2300px;
     margin: 0;
     padding: 0;
     z-index: -100;
@@ -57,7 +57,7 @@
 .cengine {
     background-image: url("../img/cengine02.png");
     margin: 1% 2% 1% 2%;
-    height: 800px;
+    height: 500px;
     width: 96%;
     background-position: 50% 50%;
     float: left;
@@ -69,27 +69,27 @@
     margin: 1% 1% 1% 2%;
     height: 400px;
     width: 58%;
-    background-position: 100% 50%;
+    background-position: 75% 50%;
     float: left;
-}
-
-
-.robot {
-    background-image: url("../img/robosim.jpg");
-    margin: 1% 2% 1% 1%;
-    height: 400px;
-    width: 36%;
-    background-position: 50% 50%;
-    float: right;
 }
 
 
 .asteroids {
     background-image: url("../img/asteroid01.png");
-    margin: 1% 2% 1% 2%;
-    height: 500px;
-    width: 96%;
+    margin: 1% 2% 1% 1%;
+    height: 400px;
+    width: 36%;
     background-position: 50% 100%;
+    float: right;
+}
+
+
+.robot {
+    background-image: url("../img/robosim.jpg");
+    margin: 1% 2% 1% 2%;
+    height: 300px;
+    width: 96%;
+    background-position: 50% 50%;
     float: left;
 }
 
