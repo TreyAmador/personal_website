@@ -10,46 +10,23 @@
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
-.cengine-container {
+.demo-container {
+    position: relative;
     width: 75%;
     margin: 0 auto;
 }
 
-.cengine-title {
-    font-size: 2em;
-    text-align: center;
-    padding: 2em 2em;
-}
-
-.cengine-container video {
+.demo-container video {
     position: relative;
     width: 100%;
 }
 
-.cengine-container .cengine-description {
-    position: relative;
-    padding: 2em 1% 2em 1%;
-    width: 98%;
-    font-size: 1.2em;
-}
-
-.trader-container {
-    width: 60%;
-    margin: 0 auto;
-}
-
-.trader-title {
-    font-size: 2em;
-    text-align: center;
-    padding: 2em 2em;
-}
-
-.trader-container video {
+.demo-container audio {
     position: relative;
     width: 100%;
 }
 
-.trader-container .trader-description {
+.demo-container .demo-description {
     position: relative;
     padding: 2em 1% 2em 1%;
     width: 98%;

@@ -35,7 +35,7 @@ body {
 }
 
 .subject-name:hover {
-	color: #ffa500;
+	color: #dddddd;
 }
 
 .directory {
@@ -53,8 +53,28 @@ body {
 	font-weight: lighter;
 }
 
-.directory a:hover {
-	color: #777777;
+.red-hover:hover {
+	color: #ff5566;
+}
+
+.orange-hover:hover {
+	color: #ee9966;
+}
+
+.yellow-hover:hover {
+	color: #ffdd77;
+}
+
+.green-hover:hover {
+	color: #88ee77;
+}
+
+.blue-hover:hover {
+	color: #77ccee;
+}
+
+.purple-hover:hover {
+	color: #ff77ff;
 }
 
 .sidebar-header {
