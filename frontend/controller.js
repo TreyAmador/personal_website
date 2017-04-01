@@ -16,11 +16,23 @@ var app = angular
                 controller: 'aboutCtlr'
             })
             .when('/cengine', {
-                templateUrl: 'views/democengine.html',
+                templateUrl: 'views/demo/cengine.html',
                 controller: 'demoCtlr'
             })
             .when('/trader', {
-                templateUrl: 'views/demotrader.html',
+                templateUrl: 'views/demo/trader.html',
+                controller: 'demoCtlr'
+            })
+            .when('/asteroids', {
+                templateUrl: 'views/demo/asteroids.html',
+                controller: 'demoCtlr'
+            })
+            .when('/robot', {
+                templateUrl: 'views/demo/robot.html',
+                controller: 'demoCtlr'
+            })
+            .when('/drum', {
+                templateUrl: 'views/demo/drum.html',
                 controller: 'demoCtlr'
             })
             .when('/blog', {
