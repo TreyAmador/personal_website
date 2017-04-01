@@ -1,4 +1,6 @@
-
+/*
+    stylesheet for demos
+*/
 
 .demo-wrapper {
     position: relative;
@@ -8,12 +10,10 @@
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
-
 .cengine-container {
     width: 75%;
     margin: 0 auto;
 }
-
 
 .cengine-title {
     font-size: 2em;
@@ -21,12 +21,10 @@
     padding: 2em 2em;
 }
 
-
 .cengine-container video {
     position: relative;
     width: 100%;
 }
-
 
 .cengine-container .cengine-description {
     position: relative;
@@ -35,15 +33,10 @@
     font-size: 1.2em;
 }
 
-
-
-
-
 .trader-container {
     width: 60%;
     margin: 0 auto;
 }
-
 
 .trader-title {
     font-size: 2em;
@@ -51,12 +44,10 @@
     padding: 2em 2em;
 }
 
-
 .trader-container video {
     position: relative;
     width: 100%;
 }
-
 
 .trader-container .trader-description {
     position: relative;
@@ -64,7 +55,6 @@
     width: 98%;
     font-size: 1.2em;
 }
-
 
 .demo-directory {
     position: relative;
@@ -77,14 +67,18 @@
     left: 0px;
 }
 
-
 .demo-directory .left-demo {
     float: left;
 }
-
 
 .demo-directory .right-demo {
     float: right;
 }
 
+.demo-directory a {
+    color: #000000;
+    transition: color 200ms ease;
+}
 
+.demo-directory a:hover {
+    color: #ff88bb;

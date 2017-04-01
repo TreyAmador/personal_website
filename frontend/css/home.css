@@ -2,7 +2,6 @@
     home class stylesheet
 */
 
-
 .home-page {
     position: static;
     height: 2300px;
@@ -11,14 +10,12 @@
     z-index: -100;
 }
 
-
 .home-directory-outer {
     position: relative;
     top: 6em;
     width: 90%;
     height: 20px;
 }
-
 
 .home-directory {
     position: relative;
@@ -27,7 +24,6 @@
     left: 10%;
 }
 
-
 .home-directory a {
     text-decoration: none;
     padding: 10px;
@@ -35,11 +31,9 @@
     transition: color 300ms ease;
 }
 
-
 .home-directory a:hover {
     color: #777777;
 }
-
 
 .grid-container {
     position: relative;
@@ -48,11 +42,9 @@
     top: 12em;
 }
 
-
 .entry-handle {
     background-size: cover;
 }
-
 
 .cengine {
     background-image: url("../img/cengine02.png");
@@ -63,7 +55,6 @@
     float: left;
 }
 
-
 .trader {
     background-image: url("../img/corner01.png");
     margin: 1% 1% 1% 2%;
@@ -72,7 +63,6 @@
     background-position: 75% 50%;
     float: left;
 }
-
 
 .asteroids {
     background-image: url("../img/asteroid01.png");
@@ -83,7 +73,6 @@
     float: right;
 }
 
-
 .robot {
     background-image: url("../img/robosim.jpg");
     margin: 1% 2% 1% 2%;
@@ -93,7 +82,6 @@
     float: left;
 }
 
-
 .drum {
     background-image: url("../img/drums.jpg");
     margin: 1% 1% 1% 2%;
@@ -102,7 +90,6 @@
     background-position: 0% 50%;
     float: left;
 }
-
 
 .git {
     background-image: url("../img/avatar.png");
@@ -114,7 +101,6 @@
     float: right;
 }
 
-
 .entry-placard {
     position: relative;
     height: 100%;
@@ -125,7 +111,6 @@
     opacity: 0.0;
     text-decoration: none;
 }
-
 
 .entry-banner {
     position: relative;
@@ -140,21 +125,17 @@
     border-bottom: none;
 }
 
-
 .entry-banner .header {
     font-size: 1.2em;
 }
-
 
 .entry-banner .description {
     font-size: 1.0em;
 }
 
-
 a {
     text-decoration: none;
 }
-
 
 .footer-wrapper {
     position: relative;
@@ -168,4 +149,3 @@ a {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 1em;
 }
-

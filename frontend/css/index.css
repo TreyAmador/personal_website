@@ -1,12 +1,10 @@
 /* stylesheet for navbar */
 
-
 body {
     margin: 0;
     padding: 0;
 	display: none;
 }
-
 
 .navbar-header {
 	position: fixed;
@@ -19,13 +17,10 @@ body {
 	background-color: rgba(255, 255,255, 0.0);
 }
 
-
 .navbar-header .navbar-inner {
 	width: 85%;
 	text-decoration: none;
-	
 }
-
 
 .subject-name {
 	color: #000000;
@@ -39,11 +34,9 @@ body {
 	font-weight: lighter;
 }
 
-
 .subject-name:hover {
 	color: #ffa500;
 }
-
 
 .directory {
 	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -51,7 +44,6 @@ body {
 	margin: 1.5em 0em;
 	float: right;
 }
-
 
 .directory a {
 	color: #000000;
@@ -61,12 +53,9 @@ body {
 	font-weight: lighter;
 }
 
-
-/* update for transition */
 .directory a:hover {
 	color: #777777;
 }
-
 
 .sidebar-header {
 	position: fixed;
@@ -81,14 +70,12 @@ body {
 	background-color: #ffffff;
 }
 
-
 .social-directory {
 	position: fixed;
 	vertical-align: 3em;
 	height: 20px;
 	left: 5%;
 }
-
 
 .social-directory a {
 	font-size: 1em;
@@ -100,18 +87,15 @@ body {
 	padding: 10px;
 }
 
-
 .social-directory a:hover {
 	color: #777777;
 }
-
 
 .body-wrapper {
 	position: absolute;
 	left: 100px;
 	top: 100px;
 }
-
 
 .error-wrapper {
 	position: relative;
@@ -127,7 +111,6 @@ body {
 	color: #000000;
 }
 
-
 .error-code {
 	position: relative;
 	font-size: 3em;
@@ -135,13 +118,11 @@ body {
 	transition: 500ms;
 }
 
-
 .error-description {
 	position: relative;
 	font-size: 2em;
 	color: #000000;
 }
-
 
 .construction-wrapper {
 	position: relative;
@@ -151,16 +132,10 @@ body {
 	text-align: center;
 }
 
-
 .construction-header {
 	font-size: 3em;
 }
 
-
 .construction-description {
 	font-size: 2em;
 }
-
-
-
-

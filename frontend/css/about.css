@@ -1,14 +1,9 @@
-/*
-    stylesheet for resume
-*/
-
+/* stylesheet for resume */
 
 .about-wrapper {
     position: relative;
     height: 1000px;
-    
 }
-
 
 .introduction {
     position: relative;
@@ -17,7 +12,6 @@
     margin: 0 auto;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
-
 
 .self-portrait {
     position: relative;
@@ -29,7 +23,6 @@
     background-image: url("../img/self-washed-out.jpg");
 }
 
-
 .description-wrapper {
     position: relative;
     font-size: 1.3em;
@@ -37,7 +30,6 @@
     width: 100%;
     height: auto;
 }
-
 
 .col-1 {
     position: relative;
@@ -47,7 +39,6 @@
     height: auto;
 }
 
-
 .col-2 {
     position: relative;
     float: right;
@@ -55,7 +46,6 @@
     width: 48%;
     height: auto;
 }
-
 
 .resume-directory {
     position: absolute;
@@ -65,7 +55,6 @@
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
-
 .resume-directory nav a {
     padding: 1em;
     text-decoration: none;
@@ -73,61 +62,47 @@
     transition: color 500ms ease;
 }
 
-
 .resume {
     position: relative;
     top: 0em;
 }
 
-
 .resume:hover {
     color: #dd6666;
 }
-
 
 .riverside {
     position: relative;
     top: 1em;
 }
 
-
 .riverside:hover {
     color: #ee9966;
 }
-
 
 .pomona {
     position: relative;
     top: 2em;
 }
 
-
 .pomona:hover {
     color: #ffee77;
 }
-
 
 .nih {
     position: relative;
     top: 3em;
 }
 
-
 .nih:hover {
     color: #88ee77;
 }
-
 
 .ugrj {
     position: relative;
     top: 4em;
 }
 
-
 .ugrj:hover {
     color: #77ccee;
 }
-
-
-
-

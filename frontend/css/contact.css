@@ -1,7 +1,4 @@
-/*
-    the contact sheet of application
-*/
-
+/* the contact sheet of application */
 
 .message-wrapper {
     position: relative;
@@ -14,28 +11,23 @@
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
-
 .input-list {
     position: relative;
     top: 10px;
 }
 
-
 .input-list div {
     padding: 10px;
 }
-
 
 .input-list div input {
     height: 30px;
 }
 
-
 .input-list div textarea {
     height: 100px;
     padding: 10px;
 }
-
 
 .input-list div input,textarea {
     width: 300px;
@@ -47,30 +39,22 @@
     border: none;
 }
 
-
 .input-list div input:focus,textarea:focus {
     outline: none;
 }
-
 
 .input-list div input[type=text] {
     padding: 10px;
 }
 
-
 .input-list div input[type=submit] {
     background-color: #dddddd;
 }
-
 
 .input-list div input[type=submit]:active {
     background-color: #ccaa99;
 }
 
-
 .input-list div input[type=text]:focus {
     border-bottom: 1px solid #000000;
 }
-
-
-

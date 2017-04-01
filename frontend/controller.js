@@ -71,29 +71,29 @@ app.controller('aboutCtlr',function($scope,$http) {
 
 app.controller('demoCtlr',function($scope) {
     
-    const urls = [
-        '/cengine',
-        '/trader',
-        '/asteroids',
-        '/robot',
-        '/drum'
-    ];
+    var mapurls = new Map([
+        ['/cengine', 'Game Engine'],
+        ['/trader', 'BroncoCorner'],
+        ['/asteroids', 'Asteroids'],
+        ['/robot', 'Robotics'],
+        ['/drum', 'Drum machine']
+    ]);
+    var urls = Array.from(mapurls.keys());
     var length = urls.length;
 
-    // check this more and more!
     var load_directory = function() {
         var http = $(location).attr('href').split('/').pop();
         var i = urls.indexOf('/'+http);
-        var prev = (i-1 + length) % length,
-            next = (i+1) % length;
+        var prev = urls[(i-1 + length) % length];
+        var next = urls[(i+1) % length];
         $('.left-demo').html(
-            '<a href=\"'+urls[prev]+'\">'+'Left Demo'+'</a>');
+            '<a href=\"'+prev+'\">'+mapurls.get(prev)+'</a>');
         $('.right-demo').html(
-            '<a href=\"'+urls[next]+'\">'+'Right Demo'+'</a>');
+            '<a href=\"'+next+'\">'+mapurls.get(next)+'</a>');
     }
 
     load_directory();
-
+    
 });
 
 
