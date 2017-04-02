@@ -48,6 +48,11 @@ router.post('/user-message',function(req,res) {
 });
 
 
+// bloggers!
+
+
+
+
 router.get('/404',function(req,res,next) {
     return res.send('404');
 });

@@ -7,7 +7,47 @@
       Your browser does not support HTML5 audio
     </audio>
     <div class="demo-description">
-      a drum machine!
+      <p>
+        The audio sample is taken from the output of a 
+        rhythm generator implemented in C++. 
+        This is a work in progress, 
+        as the interface is in the design phase. 
+        Much of the impetus for this project stems 
+        from the fact that existing open-source audio libraries, 
+        or those I've come across at least, 
+        do not mix percussive audio samples with 
+        high-fidelity. When audio samples are mixed, 
+        there is a risk that the sum of the 
+        bytes of each audio stream is greater than 
+        the maximum size of the byte itself. 
+        This is called clipping. 
+        Thus, samples must be scaled in a process 
+        called dynamic range compression (DRC) to 
+        keep audio within the range of the 
+        highest and lowest byte values.
+        The DRC algorithm implemented here 
+        relies on a very low-base logarithmic 
+        scaling which dampens the amplitude of 
+        the buffer if it reaches above or below
+        a certain precent of the byte extrema. 
+      </p>
+      <p>
+        An interesting history note: 
+        Since the advent of digital technology, 
+        DRC has become more prominent in 
+        popular music releases. 
+        The average volume has been 
+        increased without overfilling the 
+        audio byte stream, which has had the 
+        effect of minimizing the difference 
+        in 'quiet' and 'loud' sections 
+        of songs. In effect, volume dynamics 
+        have been sacrifice in favor of 
+        sheer loudness since the 1990s. 
+        This occurence has been referred to 
+        in music journalism as 
+        'The Loudness War.'
+      </p>
     </div>
   </div>
 

@@ -53,7 +53,7 @@ var app = angular
 
 
 const docs = {
-    'resume':'files/Amador_Trey_Resume.pdf',
+    'resume':'files/Amador_Trey_Web_Resume.pdf',
     'riverside':'files/Amador_Trey_UCR_Unofficial.pdf',
     'pomona':'files/Amador_Trey_Pomona_Unofficial.pdf',
     'nih':'https://www.ncbi.nlm.nih.gov/pmc/articles/'+
@@ -64,20 +64,16 @@ const docs = {
 
 
 app.controller('homeCtlr', function($scope,$http) {
-
     $scope.open_pdf = function() {
-        window.open(docs['resume']);
+        open_document();
     }
-
 });
 
 
 app.controller('aboutCtlr',function($scope,$http) {
-
     $scope.open_pdf = function(key) {
-        window.open(docs[key]);
-    }
-    
+        open_document(key);
+    }    
 });
 
 
@@ -159,6 +155,14 @@ app.controller('errorCtlr',function($scope,$http) {
         $scope.code = 'unknown';
     });
 });
+
+
+
+var open_document = function(filekey) {
+    if (!filekey)
+        filekey = 'resume';
+     window.open(docs[filekey]);
+}
 
 
 var construction = function() {

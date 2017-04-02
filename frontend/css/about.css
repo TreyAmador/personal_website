@@ -31,6 +31,10 @@
     height: auto;
 }
 
+.description-wrapper span {
+    font-style: italic;
+}
+
 .col-1 {
     position: relative;
     float: left;
@@ -67,17 +71,9 @@
     top: 0em;
 }
 
-.resume:hover {
-    color: #dd6666;
-}
-
 .riverside {
     position: relative;
     top: 1em;
-}
-
-.riverside:hover {
-    color: #ee9966;
 }
 
 .pomona {
@@ -85,24 +81,12 @@
     top: 2em;
 }
 
-.pomona:hover {
-    color: #ffee77;
-}
-
 .nih {
     position: relative;
     top: 3em;
 }
 
-.nih:hover {
-    color: #88ee77;
-}
-
 .ugrj {
     position: relative;
     top: 4em;
-}
-
-.ugrj:hover {
-    color: #77ccee;
 }
