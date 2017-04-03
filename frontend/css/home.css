@@ -92,12 +92,12 @@
 }
 
 .git {
-    background-image: url("../img/avatar.png");
+    background-image: url("../img/gitprofile.png");
     background-size: cover;
     width: 56%;
     height: 400px;
     margin: 1% 2% 1% 1%;
-    background-position: 50% 50%;
+    background-position: 0% 50%;
     float: right;
 }
 
