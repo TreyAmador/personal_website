@@ -1,14 +1,23 @@
 
 
 var express = require('express');
-var router = express.Router();
+var app = express.Router();
 var path = require('path');
 
 
-router.get('/',function(req,res,next) {
-    res.send('howdy');
+app.get('/',function(req,res,next) {
+    res.render('../frontend/views/home.ejs')
 });
 
 
+app.get('/about',function(req,res,next) {
+    res.render('../frontend/views/about.ejs');
+});
 
-module.exports = router;
+
+/*app.get('/open-resume',function(req,res,next) {
+    window.open('../files/Amador_Trey_Resume.pdf');
+});
+*/
+
+module.exports = app;

@@ -24,7 +24,6 @@ module.exports = function(express) {
     app.use('/',api);
     errors(app);
     
-    
     return app;
     
 }
