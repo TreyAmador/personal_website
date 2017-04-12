@@ -15,9 +15,10 @@ app.get('/about',function(req,res,next) {
 });
 
 
-/*app.get('/open-resume',function(req,res,next) {
-    window.open('../files/Amador_Trey_Resume.pdf');
+app.get('/contact',function(req,res,next) {
+    res.render('../frontend/views/contact.ejs');
 });
-*/
+
 
 module.exports = app;
+
