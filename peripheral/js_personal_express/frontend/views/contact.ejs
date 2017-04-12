@@ -1,0 +1,37 @@
+
+
+<!doctype html>
+<html>
+  <head>
+    <% include ./partials/head %>
+  </head>
+  <body ng-app="form">
+    <header><% include ./partials/header.ejs %></header>
+    <div class="message-wrapper" ng-controller="formCtrl">
+      <div>Get in touch.</div>
+      <form class="input-list">
+        <div>
+          <input type="text" ng-model="message.username" placeholder="Name">
+        </div>
+        <div>
+          <input type="text" ng-model="message.subject" placeholder="Subject">
+        </div>
+        <div>
+          <input type="text" ng-model="message.email" placeholder="E-mail (optional)">
+        </div>
+        <div>
+          <textarea ng-model="message.textbody" placeholder="Message"></textarea>
+        </div>
+        <div>
+          <input type="submit" ng-click="submit_form()" name="submit" value="Send">
+        </div>
+      </form>
+
+      <div>{{submission_result}}</div>
+
+    </div>
+
+
+  </body>
+</html>
+

@@ -1,0 +1,165 @@
+/* stylesheet for navbar */
+
+body {
+    margin: 0;
+    padding: 0;
+	display: none;
+}
+
+.navbar-header {
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 70px;
+	z-index: 1;
+	overflow: hidden;
+	background-color: rgba(255, 255,255, 0.0);
+}
+
+.navbar-header .navbar-inner {
+	width: 85%;
+	text-decoration: none;
+}
+
+.subject-name {
+	color: #000000;
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+	text-decoration: none;
+	font-size: 1.25em;
+	margin: 0.8em 3em;
+	letter-spacing: 1px;
+	float: left;
+	transition: color 1s ease;
+	font-weight: lighter;
+}
+
+.subject-name:hover {
+	color: #dddddd;
+}
+
+.directory {
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+	word-spacing: 10px;
+	margin: 1.5em 0em;
+	float: right;
+}
+
+.directory a {
+	color: #000000;
+	text-decoration: none;
+	font-size: 1em;
+	transition: color 300ms ease;
+	font-weight: lighter;
+}
+
+.red-hover:hover {
+	color: #ff5566;
+}
+
+.orange-hover:hover {
+	color: #ff9944;
+}
+
+.yellow-hover:hover {
+	color: #ffdd77;
+}
+
+.green-hover:hover {
+	color: #88ee77;
+}
+
+.blue-hover:hover {
+	color: #77ccee;
+}
+
+.purple-hover:hover {
+	color: #aa88ff;
+}
+
+.open-resume {
+	cursor: pointer;
+}
+
+.sidebar-header {
+	position: fixed;
+	transform: rotate(270deg);
+	transform-origin: bottom left;
+	width: 100%;
+	height: 20px;
+	bottom: 0em;
+	left: 3em;
+	z-index: 1;
+	white-space: nowrap;
+	background-color: #ffffff;
+}
+
+.social-directory {
+	position: fixed;
+	vertical-align: 3em;
+	height: 20px;
+	left: 5%;
+}
+
+.social-directory a {
+	font-size: 1em;
+	text-decoration: none;
+	color: #000000;
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+	font-weight: bold;
+	transition: color 300ms ease;
+	padding: 10px;
+}
+
+.social-directory a:hover {
+	color: #777777;
+}
+
+.body-wrapper {
+	position: absolute;
+	left: 100px;
+	top: 100px;
+}
+
+.error-wrapper {
+	position: relative;
+	top: 10em;
+	font-family: Arial, Helvetica, sans-serif;
+	text-align: center;
+	
+}
+
+.error-header {
+	position: relative;
+	font-size: 2.5em;
+	color: #000000;
+}
+
+.error-code {
+	position: relative;
+	font-size: 3em;
+	color: #000000;
+	transition: 500ms;
+}
+
+.error-description {
+	position: relative;
+	font-size: 2em;
+	color: #000000;
+}
+
+.construction-wrapper {
+	position: relative;
+	top: 10em;
+	font-family: Arial, Helvetica, sans-serif;
+	color: #000000;
+	text-align: center;
+}
+
+.construction-header {
+	font-size: 3em;
+}
+
+.construction-description {
+	font-size: 2em;
+}
