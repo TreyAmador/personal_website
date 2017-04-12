@@ -35,6 +35,7 @@ app.controller('formCtrl',function($scope,$http) {
                 reset_input();
             }, function(res) {
                 $scope.submission_result = 'Error sending message!';
+                reset_input();
             });
         }
     }
