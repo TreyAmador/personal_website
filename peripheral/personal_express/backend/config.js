@@ -12,8 +12,9 @@ module.exports = function(express) {
     var bodyParser = require('body-parser');
     //var favicon = require('serve-favicon');
     var api = require('./api.js');
+    //var emailer = require('./emailer.js');
     var errors = require('./error.js');
-    //app.set('view engine','ejs');
+    app.set('view engine','ejs');
 
     app.use(logger('dev'));
     app.use(bodyParser.json());
