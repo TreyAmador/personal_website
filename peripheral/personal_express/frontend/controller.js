@@ -1,6 +1,6 @@
 
 
-var app = angular.module('form',[]);
+var app = angular.module('personal',[]);
 
 app.controller('formCtrl',function($scope,$http) {
 
@@ -39,20 +39,30 @@ app.controller('formCtrl',function($scope,$http) {
             });
         }
     }
-
 });
 
 
-/*
-$http({
-  method: 'GET',
-  url: '/someUrl'
-}).then(function successCallback(response) {
-    // this callback will be called asynchronously
-    // when the response is available
-  }, function errorCallback(response) {
-    // called asynchronously if an error occurs
-    // or server returns response with an error status.
-  });
-*/
+app.controller('docCtrl',function($scope,$http) {
+
+    const docs = {
+        'resume':'files/Amador_Trey_Web_Resume.pdf',
+        'riverside':'files/Amador_Trey_UCR_Unofficial.pdf',
+        'pomona':'files/Amador_Trey_Pomona_Unofficial.pdf',
+        'nih':'https://www.ncbi.nlm.nih.gov/pmc/articles/'+
+                'PMC5013726/pdf/nihms-808778.pdf',
+        'ugrj':'http://ssp.ucr.edu/journal/volumes/'+
+                'volume7/ugrjournal-volvii_amador.pdf'
+    };
+
+    $scope.open_pdf = function(dockey) {
+        if (!dockey) {
+            dockey = 'resume';
+        }
+        window.open(docs[dockey]);
+    }
+});
+
+
+
+
 
