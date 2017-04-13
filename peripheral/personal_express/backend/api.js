@@ -21,7 +21,9 @@ app.get('/contact',function(req,res,next) {
 });
 
 
-
+//app.get('/error',function(req,res,next) {
+//    res.render('../frontend/views/error.ejs');
+//});
 
 
 module.exports = app;

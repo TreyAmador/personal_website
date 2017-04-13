@@ -1,0 +1,17 @@
+
+<!doctype html>
+<html>
+  <head><% include ./partials/head.ejs %></head>
+  <body>
+    <header><% include ./partials/header.ejs %></header>
+    <div class="error-wrapper">
+      <div>
+        <span class="error-header">Error </span>
+        <span class="error-code"><%= status %></span>
+      </div>
+      <div class="error-description">page not found</div>
+    </div>
+  </body>
+</html>
+
+
