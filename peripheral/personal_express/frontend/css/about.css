@@ -64,6 +64,7 @@
     text-decoration: none;
     color: #000000;
     transition: color 500ms ease;
+    -webkit-transition: color 500ms ease;
 }
 
 .resume {

@@ -55,6 +55,7 @@
 .demo-directory a {
     color: #000000;
     transition: color 200ms ease;
+    -webkit-transition: color 200ms ease;
 }
 
 .demo-directory a:hover {

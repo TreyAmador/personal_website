@@ -31,6 +31,7 @@ body {
 	letter-spacing: 1px;
 	float: left;
 	transition: color 1s ease;
+	-webkit-transition: color 1s ease;
 	font-weight: lighter;
 }
 
@@ -50,6 +51,7 @@ body {
 	text-decoration: none;
 	font-size: 1em;
 	transition: color 300ms ease;
+	-webkit-transition: color 300ms ease;
 	font-weight: lighter;
 }
 
@@ -84,7 +86,11 @@ body {
 .sidebar-header {
 	position: fixed;
 	transform: rotate(270deg);
+	-webkit-transform: rotate(270deg);
+	-ms-transform: rotate(270deg);
 	transform-origin: bottom left;
+	-webkit-transform-origin: bottom left;
+	-ms-transform-origin: bottom left;
 	width: 100%;
 	height: 20px;
 	bottom: 0em;
@@ -108,6 +114,7 @@ body {
 	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 	font-weight: bold;
 	transition: color 300ms ease;
+	-webkit-transition: color 300ms ease;
 	padding: 10px;
 }
 
@@ -140,6 +147,7 @@ body {
 	font-size: 3em;
 	color: #000000;
 	transition: 500ms;
+	-webkit-transition: 500ms;
 }
 
 .error-description {

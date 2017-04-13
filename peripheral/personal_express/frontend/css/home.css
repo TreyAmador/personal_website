@@ -27,6 +27,7 @@
     padding: 10px;
     color: #000000;
     transition: color 300ms ease;
+    -webkit-transition: color 300ms ease;
 }
 
 .home-directory a:hover {
@@ -119,7 +120,11 @@
     color: #000000;
     opacity: 0.0;
     transform: rotate(270deg);
+    -webkit-transform: rotate(270deg);
+    -moz-transform: rotate(270deg);
     transform-origin: left bottom;
+    -webkit-transform-origin: left bottom;
+    -moz-transform-origin: left bottom;
     border-bottom: none;
 }
 
