@@ -1,3 +1,7 @@
+/*
+    backend routing system
+*/
+
 
 
 var express = require('express');
@@ -18,6 +22,13 @@ app.get('/about',function(req,res,next) {
 
 app.get('/contact',function(req,res,next) {
     res.render('../frontend/views/contact.ejs');
+});
+
+
+app.get('/blog',function(req,res,next) {
+    res.render('../frontend/views/blog.ejs',{
+        constructor:'This page is construction...'
+    });
 });
 
 
