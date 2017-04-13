@@ -43,6 +43,7 @@
 
 .entry-handle {
     background-size: cover;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 
@@ -56,8 +57,20 @@
     margin: 1% 5% 1% 5%;
     width: 90%;
     float: left;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
+
+.left-align .entry-image {
+    margin: 1% 1% 1% 5%;
+    width: 45%;
+    float: left;
+}
+
+.left-align .entry {
+    margin: 5% 1% 1% 1%;
+    width: 45%;
+    float: right;
+}
+
 
 .entry .entry-title {
     position: relative;
@@ -82,6 +95,12 @@
 .cengine-image {
     background-image: url("../img/cengine02.png");
     height: 400px;
+    background-position: 50% 50%;
+}
+
+.trader-image {
+    background-image: url("../img/corner01.png");
+    height: 300px;
     background-position: 50% 50%;
 }
 
