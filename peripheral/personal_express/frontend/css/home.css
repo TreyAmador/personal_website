@@ -45,6 +45,50 @@
     background-size: cover;
 }
 
+
+.top-align .entry-image {
+    margin: 1% 10% 1% 10%;
+    width: 80%;
+    float: left;
+}
+
+.top-align .entry {
+    margin: 1% 5% 1% 5%;
+    width: 90%;
+    float: left;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.entry .entry-title {
+    position: relative;
+    font-size: 2em;
+    text-align: left;
+}
+
+.entry-description .language {
+    font-size: 1.5em;
+}
+
+.entry-description .date {
+    font-size: 1em;
+}
+
+.entry .entry-textbody {
+    margin: 1em 2em 1em 2em;
+    font-size: 1em;
+    font-weight: lighter;
+}
+
+.cengine-image {
+    background-image: url("../img/cengine02.png");
+    height: 400px;
+    background-position: 50% 50%;
+}
+
+
+
+/*
+
 .cengine {
     background-image: url("../img/cengine02.png");
     margin: 1% 2% 1% 2%;
@@ -100,6 +144,8 @@
     float: right;
 }
 
+*/
+
 .entry-placard {
     position: relative;
     height: 100%;
@@ -111,6 +157,7 @@
     text-decoration: none;
 }
 
+/*
 .entry-banner {
     position: relative;
     left: 1em;
@@ -135,6 +182,8 @@
 .entry-banner .description {
     font-size: 1.0em;
 }
+
+*/
 
 a {
     text-decoration: none;
