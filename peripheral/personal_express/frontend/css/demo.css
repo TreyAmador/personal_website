@@ -18,7 +18,9 @@
 
 .demo-container video {
     position: relative;
+    margin: 0 auto;
     width: 100%;
+    left: 0px;
 }
 
 .demo-container audio {
@@ -26,8 +28,18 @@
     width: 100%;
 }
 
-.demo-container .demo-description {
+.demo-title {
     position: relative;
+    top: 50px;
+    font-size: 2em;
+    width: 98%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.demo-description {
+    position: relative;
+    top: 50px;
     padding: 2em 1% 2em 1%;
     width: 98%;
     font-size: 1.2em;

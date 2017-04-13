@@ -1,0 +1,54 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <% include ../partials/head.ejs %>
+    <title>C++ engine</title>
+  </head>
+  <body ng-app="personal">
+    <header><% include ../partials/header.ejs %></header>
+    <div class="demo-wrapper">
+      <div class="demo-container">
+        <video controls>
+          <source src="../media/cengine.mp4" type="video/mp4">
+          Your browser does not support HTML5 video
+        </video>
+        <div class="demo-title">C++ game engine</div>
+        <div class="demo-description">
+          This engine was implemented in C++ using 
+          the Simple DirectMedia Library for the 
+          purpose of rendering graphics. It includes 
+          a physics engine, a particle engine, 
+          an automatic map-loader which parses xml files, 
+          graphics managers, etc...
+          The design paradigm centered around all in-game 
+          objects inhereting from abstract geometic objects 
+          which roughly represented their physical properties,
+          (i.e., circular sprites inheret from circle class). 
+          All physics calculations were greatly simplified 
+          since each update referred to the superclass, 
+          and not the object itself. 
+          In turn, each physics shape 
+          inhereted from a 'body' class. 
+          This had the advantage of allowing all objects 
+          to be updated and rendered by simply passing 
+          the body superclass into functions which 
+          completed these tasks, rather than updating 
+          each sprite individually.  One could pass 
+          any 'body' object into the camera object,
+          for example, which would calculate the offset 
+          and render it to screen. 
+        </div>
+      </div>
+
+      <div class="demo-directory">
+        <div class="left-demo"></div>
+        <div class="right-demo"></div>
+      </div>
+
+    </div>
+
+  </body>
+</html>

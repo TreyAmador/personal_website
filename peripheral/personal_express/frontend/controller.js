@@ -1,6 +1,10 @@
+/*
+    frontend controller system
+*/
 
 
 var app = angular.module('personal',[]);
+
 
 app.controller('formCtrl',function($scope,$http) {
 

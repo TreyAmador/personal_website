@@ -32,6 +32,11 @@ app.get('/blog',function(req,res,next) {
 });
 
 
+app.get('/cengine',function(req,res,next) {
+    res.render('../frontend/views/demos/cengine.ejs');
+});
+
+
 //app.get('/error',function(req,res,next) {
 //    res.render('../frontend/views/error.ejs');
 //});

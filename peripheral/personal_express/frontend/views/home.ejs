@@ -3,7 +3,10 @@
 
 <!DOCTYPE html>
 <html lang="en">
-  <head><% include ./partials/head.ejs %></head>
+  <head>
+    <% include ./partials/head.ejs %>
+    <title>Trey Amador</title>
+  </head>
   <body ng-app="personal">
     <header><% include ./partials/header.ejs %></header>
 
@@ -12,11 +15,11 @@
 
         <div class="home-directory-outer">
           <nav class="home-directory">
-            <a class="pointer" name="cengine-anchor">game engine</a>
-            <a class="pointer" name="trader-anchor">broncocorner</a>
-            <a class="pointer" name="asteroids-anchor">asteroids</a>
-            <a class="pointer" name="robot-anchor">robotic sim</a>
-            <a class="pointer" name="drum-anchor">drum machine</a>
+            <a href="/cengine" name="cengine-anchor">game engine</a>
+            <a href="/trader" name="trader-anchor">broncocorner</a>
+            <a href="/asteroids" name="asteroids-anchor">asteroids</a>
+            <a href="/robot" name="robot-anchor">robotic sim</a>
+            <a href="/drum" name="drum-anchor">drum machine</a>
           </nav>
         </div>
         
