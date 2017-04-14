@@ -15,6 +15,7 @@ var anchor_listener = function() {
     });
 }
 
+
 /*
 var image_scroll = function() {
     var poses = [];
@@ -33,6 +34,7 @@ var image_scroll = function() {
     });
 }
 */
+
 
 var slide_fade = function() {
     $('.entry-image').hover(function() {
@@ -55,11 +57,35 @@ var slide_fade = function() {
 }
 
 
+var demo_popup = function() {
+
+    const entries = {
+        'cengine':'',
+        'trader':'',
+        'robot':'',
+        'asteroids':'',
+        'drums':''
+    };
+
+    $('.entry-image a').each(function() {
+        $(this).click(function(event) {
+
+            console.log($(this).attr('class'));
+            $('.home-page').css({
+                'background-color':'rgba(0,0,0,0.5)'
+            });
+            
+        });
+    });
+
+}
+
 
 $(document).ready(function() {
     anchor_listener();
     //image_scroll();
-    slide_fade();    
+    slide_fade();
+    demo_popup();
 });
 
 
