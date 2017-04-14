@@ -2,7 +2,6 @@
 
 .home-page {
     position: static;
-    height: 2300px;
     margin: 0;
     padding: 0;
     z-index: -100;
@@ -46,6 +45,7 @@
     background-size: cover;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     clear: both;
+    z-index: 100;
 }
 
 .top-align .entry-image {
@@ -78,14 +78,12 @@
     margin: 1% 1% 1% 5%;
     width: 44%;
     float: left;
-    
 }
 
 .left-align .entry {
     margin: 1% 1% 1% 1%;
     width: 48%;
     float: right;
-    
 }
 
 .left-align .entry .entry-title {
@@ -104,14 +102,12 @@
     margin: 1% 1% 1% 5%;
     width: 44%;
     float: right;
-    
 }
 
 .right-align .entry {
     margin: 1% 1% 1% 1%;
     width: 48%;
     float: left;
-    
     text-align: right;
 }
 
@@ -180,67 +176,16 @@
 }
 
 
-
-
-
-/*
-
-.cengine {
-    background-image: url("../img/cengine02.png");
-    margin: 1% 2% 1% 2%;
-    height: 500px;
-    width: 96%;
-    background-position: 50% 50%;
-    float: left;
-}
-
-.trader {
-    background-image: url("../img/corner01.png");
-    margin: 1% 1% 1% 2%;
-    height: 400px;
-    width: 58%;
-    background-position: 75% 50%;
-    float: left;
-}
-
-.asteroids {
-    background-image: url("../img/asteroid01.png");
-    margin: 1% 2% 1% 1%;
-    height: 400px;
-    width: 36%;
-    background-position: 50% 100%;
-    float: right;
-}
-
-.robot {
-    background-image: url("../img/robosim.jpg");
-    margin: 1% 2% 1% 2%;
-    height: 300px;
-    width: 96%;
-    background-position: 50% 50%;
-    float: left;
-}
-
 .drum {
+    position: relative;
+    top: 40em;
+}
+
+.drum-image {
     background-image: url("../img/drums.jpg");
-    margin: 1% 1% 1% 2%;
     height: 400px;
-    width: 38%;
-    background-position: 0% 50%;
-    float: left;
+    background-position: 50% 50%;
 }
-
-.git {
-    background-image: url("../img/gitprofile.png");
-    background-size: cover;
-    width: 56%;
-    height: 400px;
-    margin: 1% 2% 1% 1%;
-    background-position: 0% 50%;
-    float: right;
-}
-
-*/
 
 .entry-placard {
     position: relative;
@@ -253,47 +198,33 @@
     text-decoration: none;
 }
 
-/*
-.entry-banner {
-    position: relative;
-    left: 1em;
-    bottom: 3em;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    text-decoration: none;
-    color: #000000;
-    opacity: 0.0;
-    transform: rotate(270deg);
-    -webkit-transform: rotate(270deg);
-    -moz-transform: rotate(270deg);
-    transform-origin: left bottom;
-    -webkit-transform-origin: left bottom;
-    -moz-transform-origin: left bottom;
-    border-bottom: none;
-}
-
-.entry-banner .header {
-    font-size: 1.2em;
-}
-
-.entry-banner .description {
-    font-size: 1.0em;
-}
-
-*/
-
 a {
     text-decoration: none;
 }
 
 .footer-wrapper {
-    position: relative;
-    float: right;
-    right: 10%;
-    bottom: 4em;
-    width: 40%;
-    height: 20px;
-    padding: 0px;
-    margin: 0px;
+    position: absolute;
+    top: 200em;
+    width: 100%;
+    height: 100px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 1em;
 }
+
+.footer-inner {
+    position: relative;
+    width: 60%;
+    left: 20%;
+    height: 100px;
+}
+
+.footer-inner .copyright {
+    float: left;
+    clear: left;
+}
+
+.footer-inner .email-contact {
+    float: right;
+    clear: right;
+}
+
