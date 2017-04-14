@@ -42,21 +42,33 @@
 }
 
 .entry-handle {
+    position: relative;
     background-size: cover;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
-
 .top-align .entry-image {
+    margin: 1% 15% 1% 15%;
+    width: 70%;
+    float: left;
+}
+
+.top-align .entry {
     margin: 1% 10% 1% 10%;
     width: 80%;
     float: left;
 }
 
-.top-align .entry {
+.top-align .entry .entry-title {
+    position: relative;
+    font-size: 2em;
+    text-align: left;
+}
+
+.top-align .entry .entry-textbody {
     margin: 1% 5% 1% 5%;
-    width: 90%;
-    float: left;
+    font-size: 1em;
+    font-weight: lighter;
 }
 
 .left-align .entry-image {
@@ -71,13 +83,6 @@
     float: right;
 }
 
-
-.entry .entry-title {
-    position: relative;
-    font-size: 2em;
-    text-align: left;
-}
-
 .entry-description .language {
     font-size: 1.5em;
 }
@@ -86,16 +91,20 @@
     font-size: 1em;
 }
 
-.entry .entry-textbody {
-    margin: 1em 2em 1em 2em;
-    font-size: 1em;
-    font-weight: lighter;
+.cengine {
+    position: relative;
+    top: 0;
 }
 
 .cengine-image {
     background-image: url("../img/cengine02.png");
     height: 400px;
     background-position: 50% 50%;
+}
+
+.trader {
+    position: relative;
+    top: 10em;
 }
 
 .trader-image {

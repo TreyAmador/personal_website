@@ -15,7 +15,7 @@ var anchor_listener = function() {
     });
 }
 
-
+/*
 var image_scroll = function() {
     var poses = [];
     $('.entry-handle').each(function(i,entry) {
@@ -32,25 +32,25 @@ var image_scroll = function() {
         });
     });
 }
-
+*/
 
 var slide_fade = function() {
-    $('.entry-handle').hover(function() {
+    $('.entry-image').hover(function() {
         $(this).find('.entry-placard').animate({
             opacity:'0.7'
         },500,'linear');
-        $(this).find('.entry-banner').animate({
-            opacity:'1.0',
-            left:'+=30px'
-        },500,'linear');
+        //$(this).find('.entry-banner').animate({
+        //    opacity:'1.0',
+        //    left:'+=30px'
+        //},500,'linear');
     }, function() {
         $(this).find('.entry-placard').animate({
             opacity:'0.0'
         },500,'linear');
-        $(this).find('.entry-banner').animate({
-            opacity:'0.0',
-            left:'-=30px'
-        },500,'linear');
+        //$(this).find('.entry-banner').animate({
+        //    opacity:'0.0',
+        //    left:'-=30px'
+        //},500,'linear');
     });
 }
 
@@ -58,7 +58,7 @@ var slide_fade = function() {
 
 $(document).ready(function() {
     anchor_listener();
-    image_scroll();
+    //image_scroll();
     slide_fade();    
 });
 
