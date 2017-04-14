@@ -45,18 +45,21 @@
     position: relative;
     background-size: cover;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    clear: both;
 }
 
 .top-align .entry-image {
-    margin: 1% 15% 1% 15%;
-    width: 70%;
-    float: left;
-}
-
-.top-align .entry {
     margin: 1% 10% 1% 10%;
     width: 80%;
     float: left;
+    
+}
+
+.top-align .entry {
+    margin: 1% 15% 1% 15%;
+    width: 70%;
+    float: left;
+    
 }
 
 .top-align .entry .entry-title {
@@ -66,21 +69,62 @@
 }
 
 .top-align .entry .entry-textbody {
-    margin: 1% 5% 1% 5%;
+    margin: 5% 5% 5% 5%;
     font-size: 1em;
     font-weight: lighter;
 }
 
 .left-align .entry-image {
     margin: 1% 1% 1% 5%;
-    width: 45%;
+    width: 44%;
     float: left;
+    
 }
 
 .left-align .entry {
-    margin: 5% 1% 1% 1%;
-    width: 45%;
+    margin: 1% 1% 1% 1%;
+    width: 48%;
     float: right;
+    
+}
+
+.left-align .entry .entry-title {
+    position: relative;
+    font-size: 2em;
+    text-align: left;
+}
+
+.left-align .entry .entry-textbody {
+    margin: 5% 5% 5% 5%;
+    font-size: 1em;
+    font-weight: lighter;
+}
+
+.right-align .entry-image {
+    margin: 1% 1% 1% 5%;
+    width: 44%;
+    float: right;
+    
+}
+
+.right-align .entry {
+    margin: 1% 1% 1% 1%;
+    width: 48%;
+    float: left;
+    
+    text-align: right;
+}
+
+.right-align .entry .entry-title {
+    position: relative;
+    font-size: 2em;
+    text-align: right;
+}
+
+.right-align .entry .entry-textbody {
+    margin: 5% 5% 5% 5%;
+    font-size: 1em;
+    font-weight: lighter;
 }
 
 .entry-description .language {
@@ -93,7 +137,7 @@
 
 .cengine {
     position: relative;
-    top: 0;
+    top: 5em;
 }
 
 .cengine-image {
@@ -112,6 +156,30 @@
     height: 300px;
     background-position: 50% 50%;
 }
+
+.robot {
+    position: relative;
+    top: 25em;
+}
+
+.robot-image {
+    background-image: url("../img/robosim.jpg");
+    height: 300px;
+    background-position: 50% 50%;
+}
+
+.asteroids {
+    position: relative;
+    top: 30em;
+}
+
+.asteroids-image {
+    background-image: url("../img/asteroid01.png");
+    height: 200px;
+    background-position: 50% 50%;
+}
+
+
 
 
 
