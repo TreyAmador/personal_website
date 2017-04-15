@@ -52,11 +52,25 @@ var open_resume = function() {
 }
 
 
+var navbar_shadow = function() {
+    $(document).scroll(function() {
+        var pos = $(window).scrollTop();
+        console.log(pos);
+        $('.navbar-shadow').css({
+            'opacity':(pos)/100
+        });
+    });
+
+}
+
+
+// this has 
 $(document).ready(function() {
-    var headers = hoist_headers();
+    //var headers = hoist_headers();
     load_page();
-    lower_header(headers);
-    open_resume();
+    //lower_header(headers);
+    //open_resume();
+    navbar_shadow();
 });
 
 

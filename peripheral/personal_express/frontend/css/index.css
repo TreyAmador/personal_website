@@ -1,19 +1,16 @@
 /* stylesheet for navbar */
 
-
 body {
 	background-color: white;
 	margin: 0;
 	padding: 0;
-	height: 1000px;
-	width: 100%;
 }
 
 .navbar-header {	
 	position: fixed;
 	font-family: 'Arial Narrow Bold', sans-serif;
 	background-color: #ffffff;
-	height: 100px;
+	height: 98px;
 	width: 100%;
 	top: 0;
 	left: 0;
@@ -36,12 +33,14 @@ body {
 	width: 100%;
 	height: 2px;
 	background-color: #dddddd;
+	opacity: 0;
 }
 
 .subject-name {
 	font-size: 2em;
 	color: #000000;
 	text-decoration: none;
+	letter-spacing: 3px;
 	float: left;
 	clear: left;
 }
@@ -49,6 +48,7 @@ body {
 .directory {
 	float: right;
 	clear: right;
+	
 }
 
 .directory a {
@@ -57,72 +57,12 @@ body {
 	color: #000000;
 	margin: 0.8em;
 	font-weight: 100;
+	transition: color 500ms ease;
+	-webkit-transition: color 500ms ease;
 }
-
 
 .pointer {
 	cursor: pointer;
-}
-
-
-
-
-
-
-/*
-body {
-    margin: 0;
-    padding: 0;
-	display: none;
-}
-
-.navbar-header {
-	position: fixed;
-	top: 0px;
-	left: 0px;
-	width: 100%;
-	height: 70px;
-	z-index: 100;
-	overflow: hidden;
-	background-color: rgba(255, 255,255, 0.0);
-}
-
-.navbar-header .navbar-inner {
-	width: 85%;
-	text-decoration: none;
-}
-
-.subject-name {
-	color: #000000;
-	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-	text-decoration: none;
-	font-size: 1.25em;
-	margin: 0.8em 3em;
-	letter-spacing: 1px;
-	float: left;
-	transition: color 1s ease;
-	-webkit-transition: color 1s ease;
-	font-weight: lighter;
-}
-
-.subject-name:hover {
-	color: #dddddd;
-}
-
-.directory {
-	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-	word-spacing: 10px;
-	margin: 1.5em 0em;
-	float: right;
-}
-
-.directory a {
-	color: #000000;
-	text-decoration: none;
-	font-size: 1em;
-	transition: color 300ms ease;
-	-webkit-transition: color 300ms ease;
-	font-weight: lighter;
 }
 
 .red-hover:hover {
@@ -148,52 +88,3 @@ body {
 .purple-hover:hover {
 	color: #aa88ff;
 }
-
-.pointer {
-	cursor: pointer;
-}
-
-.sidebar-header {
-	position: fixed;
-	transform: rotate(270deg);
-	-webkit-transform: rotate(270deg);
-	-ms-transform: rotate(270deg);
-	transform-origin: bottom left;
-	-webkit-transform-origin: bottom left;
-	-ms-transform-origin: bottom left;
-	width: 100%;
-	height: 20px;
-	bottom: 0em;
-	left: 3em;
-	z-index: 100;
-	white-space: nowrap;
-}
-
-.social-directory {
-	position: fixed;
-	vertical-align: 3em;
-	height: 20px;
-	left: 5%;
-}
-
-.social-directory a {
-	font-size: 1em;
-	text-decoration: none;
-	color: #000000;
-	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-	font-weight: bold;
-	transition: color 300ms ease;
-	-webkit-transition: color 300ms ease;
-	padding: 10px;
-}
-
-.social-directory a:hover {
-	color: #777777;
-}
-
-.body-wrapper {
-	position: absolute;
-	left: 100px;
-	top: 100px;
-}
-*/
