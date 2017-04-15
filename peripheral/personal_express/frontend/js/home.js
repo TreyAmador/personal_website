@@ -66,7 +66,7 @@ var project_hover = function() {
         $(this).hover(function() {
 
             $(this).find('.entry-placard').animate({
-                opacity:'0.8'
+                opacity:'0.9'
             },300,'linear');
             
             var headline = $(this).find('.entry-headline');

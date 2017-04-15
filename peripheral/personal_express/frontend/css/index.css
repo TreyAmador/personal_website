@@ -54,7 +54,7 @@ body {
 .directory a {
 	font-size: 1.2em;
 	text-decoration: none;
-	color: #000000;
+	color: #666666;
 	margin: 0.8em;
 	font-weight: 100;
 	transition: color 500ms ease;
