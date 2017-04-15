@@ -6,6 +6,11 @@
 var app = angular.module('personal',[]);
 
 
+app.controller('homeCtrl',function($scope,$http) {
+    //console.log('your are in the home page!');
+});
+
+
 app.controller('formCtrl',function($scope,$http) {
 
     var reset_input = function() {

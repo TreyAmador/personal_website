@@ -45,17 +45,16 @@ var lower_header = function(headers) {
 }
 
 
-var open_resume = function() {
-    $('.open-resume').click(function() {
-        window.open('../files/Amador_Trey_Resume.pdf');
-    });
-}
+//var open_resume = function() {
+//    $('.open-resume').click(function() {
+//        window.open('../files/Amador_Trey_Resume.pdf');
+//    });
+//}
 
 
 var navbar_shadow = function() {
     $(document).scroll(function() {
         var pos = $(window).scrollTop();
-        console.log(pos);
         $('.navbar-shadow').css({
             'opacity':(pos)/100
         });
@@ -66,9 +65,9 @@ var navbar_shadow = function() {
 
 // this has 
 $(document).ready(function() {
-    //var headers = hoist_headers();
+    var headers = hoist_headers();
     load_page();
-    //lower_header(headers);
+    lower_header(headers);
     //open_resume();
     navbar_shadow();
 });

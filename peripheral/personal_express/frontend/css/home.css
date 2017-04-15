@@ -3,38 +3,92 @@
 .home-page {
     position: relative;
     background-color: #ffffff;
-    top: 98px;
-    left: 0px;
+    top: 98px; left: 0px;
     width: 100%;
-    height: 2000px;
 }
 
 .intro-banner {
     position: relative;
     font-family: 'Arial Narrow Bold', sans-serif;
     width: 100%;
-    
 }
 
 .introduction {
     position: relative;
-    font-size: 3em;
+    font-size: 2.5em;
     margin: 3em 0em 3em 0em;
     width: 55%;
     left: 35%;
     overflow: auto;
-    line-height: 140%;
+    line-height: 130%;
 }
 
+.introduction span {
+    color: #ff66cc;
+}
 
+.entries {
+    position: relative;
+    top: 0; left: 0;
+    width: 100%; height: 2000px;
+}
+
+.entry {
+    position: relative;
+    top: 0px;
+    left: 3%;
+    width: 44%; height: 500px;
+}
+
+.entry-image {
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+    width: 100%; height: 100%;
+}
+
+.cengine {
+    background-image: url("../img/cengine04.png");
+}
+
+.entry-placard {
+    position: absolute;
+    background-color: #000000;
+    opacity: 0.0;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+}
+
+.entry-headline {
+    position: absolute;
+    font-family: 'Arial Narrow Bold', sans-serif;
+    bottom: 40px; left: 5%;
+    width: 90%;
+    color: #ffffff;
+}
+
+.entry-headline .project {
+    position: absolute;
+    font-size: 1.5em;
+    opacity: 0.0;
+}
+
+.entry-headline .language {
+    position: absolute;
+    font-size: 1.0em;
+    opacity: 0.0;
+}
 
 
 
 ::selection {
-    background: #ffffaa;
+    background: #000000;
+    color: #ffffff;
 }
 
 ::-moz-selection {
     background: #ffffaa;
+    color: #ffffff;
 }
 

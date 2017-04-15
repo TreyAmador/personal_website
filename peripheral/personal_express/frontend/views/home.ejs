@@ -8,17 +8,28 @@
   </head>
   <body ng-app="personal">
     <header><% include ./partials/header.ejs %></header>
-    <div class="home-page">
-
-
+    <div class="home-page" ng-controller="homeCtrl">
       <div class="intro-banner">
         <div class="introduction">
-          Hello, welcome to the website of Trey Amador, 
-          where you can see programming projects.
+          <span>Hello</span>, my name is Trey. 
+          Welcome to my website. 
+          Here, you can see a portfolio of my programming projects. 
         </div>
       </div>
+      <div class="entries">
 
 
+        <div class="entry">
+          <div class="entry-image cengine"></div>
+          <div class="entry-placard"></div>
+          <div class="entry-headline">
+            <div class="project">Game Engine</div>
+            <div class="language">implemented in C++</div>
+          </div>
+        </div>
+
+
+      </div>
     </div>
   </body>
 </html>
