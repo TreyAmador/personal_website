@@ -70,10 +70,14 @@ var demo_popup = function() {
     $('.entry-image a').each(function() {
         $(this).click(function(event) {
 
-            console.log($(this).attr('class'));
-            $('.home-page').css({
-                'background-color':'rgba(0,0,0,0.5)'
-            });
+            //console.log($(this).attr('class'));
+
+            //$('.home-page').css({
+            //    'background-color':'rgba(0,0,0,0.85)'
+            //});
+
+            
+            
             
         });
     });

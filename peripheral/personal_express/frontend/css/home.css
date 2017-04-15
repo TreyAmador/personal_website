@@ -1,8 +1,5 @@
 /* home class stylesheet */
 
-
-
-
 .home-page {
     position: static;
     margin: 0;
@@ -61,14 +58,12 @@
     margin: 1% 10% 1% 10%;
     width: 80%;
     float: left;
-    
 }
 
 .top-align .entry {
     margin: 1% 15% 1% 15%;
     width: 70%;
     float: left;
-    
 }
 
 .top-align .entry .entry-title {
@@ -208,6 +203,7 @@
 
 a {
     text-decoration: none;
+    cursor: pointer;
 }
 
 .footer-wrapper {
@@ -235,3 +231,40 @@ a {
     float: right;
     clear: right;
 }
+
+
+
+
+
+
+.centerpiece {
+    position: relative;
+    top: 10em;
+    height: 30em;
+    width: 100%;
+}
+
+.square {
+    position: absolute;
+    background-image: url("../img/sunbather.png");
+    background-size: 30em 30em;
+    background-repeat: no-repeat;
+    margin: 0 auto;
+    width: 30em;
+    height: 30em;
+    top: 0em;
+}
+
+.me {
+    position: absolute;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 3em;
+    font-weight: bold;
+    width: 100%;
+    text-align: center;
+    color: black;
+    margin: 0 0 0 0;
+    line-height: 70%;
+    top: 0em;
+}
+
