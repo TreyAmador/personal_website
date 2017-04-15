@@ -16,25 +16,6 @@ var anchor_listener = function() {
 }
 
 
-/*
-var image_scroll = function() {
-    var poses = [];
-    $('.entry-handle').each(function(i,entry) {
-        poses.push(parseInt($(this).css('top'),10));
-        var window_offset = window.pageYOffset;
-        var offset = poses[i] - window_offset;
-        $(this).css('top',offset);
-    });
-    $(document).scroll(function() {
-        var window_top = window.pageYOffset;
-        $('.entry-handle').each(function(i,entry) {
-            var offset = poses[i] - window_top;
-            $(this).css('top',offset);
-        });
-    });
-}
-*/
-
 
 var slide_fade = function() {
     $('.entry-image').hover(function() {
