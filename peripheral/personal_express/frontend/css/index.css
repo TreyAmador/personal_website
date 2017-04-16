@@ -7,7 +7,8 @@ body {
 
 .navbar-header {	
 	position: fixed;
-	font-family: 'Arial Narrow Bold', sans-serif;
+	font-family: 'Times New Roman', Times, serif;
+	/*font-family: 'Arial Narrow Bold', sans-serif;*/
 	background-color: #ffffff;
 	height: 98px; width: 100%;
 	top: 0; left: 0;
@@ -31,7 +32,7 @@ body {
 }
 
 .subject-name {
-	font-size: 2em;
+	font-size: 2.5em;
 	color: #000000;
 	text-decoration: none;
 	letter-spacing: 3px;
@@ -44,10 +45,10 @@ body {
 }
 
 .directory a {
-	font-size: 1.2em;
+	font-size: 1.6em;
 	text-decoration: none;
 	color: #666666;
-	margin: 0.8em;
+	margin: 0.5em;
 	font-weight: 100;
 	transition: color 500ms ease;
 	-webkit-transition: color 500ms ease;

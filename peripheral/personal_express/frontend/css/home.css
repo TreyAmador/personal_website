@@ -9,13 +9,14 @@
 
 .intro-banner {
     position: relative;
-    font-family: 'Arial Narrow Bold', sans-serif;
+    /*font-family: 'Arial Narrow Bold', sans-serif;*/
+    font-family: 'Times New Roman', Times, serif;
     width: 100%;
 }
 
 .introduction {
     position: relative;
-    font-size: 2.5em;
+    font-size: 2.8em;
     margin: 3em 0em 3em 0em;
     width: 55%;
     left: 35%;
@@ -78,7 +79,8 @@
 
 .entry-headline {
     position: absolute;
-    font-family: 'Arial Narrow Bold', sans-serif;
+    /*font-family: 'Arial Narrow Bold', sans-serif;*/
+    font-family: 'Times New Roman', Times, serif;
     bottom: 0px; left: 5%;
     width: 90%;
     color: #ffffff;
@@ -86,14 +88,14 @@
 
 .entry-headline .project {
     position: absolute;
-    font-size: 1.5em;
+    font-size: 1.8em;
     bottom: 10px;
     opacity: 0.0;
 }
 
 .entry-headline .language {
     position: absolute;
-    font-size: 1.0em;
+    font-size: 1.3em;
     bottom: 10px;
     opacity: 0.0;
 }

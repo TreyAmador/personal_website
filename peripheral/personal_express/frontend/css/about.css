@@ -1,25 +1,23 @@
 /* stylesheet for resume */
 
-
-/*
 .about-wrapper {
     position: relative;
     height: 1000px;
 }
 
-.introduction {
+.self-description {
     position: relative;
-    top: 3em;
+    top: 10em;
     width: 75%;
     margin: 0 auto;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    /*font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;*/
+    font-family: 'Times New Roman', Times, serif;
 }
 
 .self-portrait {
     position: relative;
     border-radius: 50%;
-    width: 30em;
-    height: 30em;
+    width: 30em; height: 30em;
     margin: 0 auto;
     background-size: 30em 30em;
     background-image: url("../img/self-washed-out.jpg");
@@ -29,8 +27,7 @@
     position: relative;
     font-size: 1.3em;
     top: 1em;
-    width: 100%;
-    height: auto;
+    width: 100%; height: auto;
 }
 
 .description-wrapper span {
@@ -58,13 +55,15 @@
     top: 53em;
     right: 10%;
     float: right;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    /*font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;*/
+    font-family: 'Times New Roman', Times, serif;
 }
 
 .resume-directory nav a {
     padding: 1em;
     text-decoration: none;
     color: #000000;
+    font-size: 1.2em;
     transition: color 500ms ease;
     -webkit-transition: color 500ms ease;
 }
@@ -74,23 +73,13 @@
     top: 0em;
 }
 
-.riverside {
-    position: relative;
-    top: 1em;
-}
-
-.pomona {
-    position: relative;
-    top: 2em;
-}
-
 .nih {
     position: relative;
-    top: 3em;
+    top: 0em;
 }
 
 .ugrj {
     position: relative;
-    top: 4em;
+    top: 0em;
 }
-*/
+
