@@ -133,7 +133,7 @@ $(document).ready(function() {
     project_hover();
     //underline_hover();
     //demo_popup();
-    contact_expand();
+    //contact_expand();
 });
 
 
