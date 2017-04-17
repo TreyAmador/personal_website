@@ -10,9 +10,14 @@ body {
 	src: url('../media/Dense.otf');
 }
 
+@font-face {
+	font-family: OpenSans;
+	src: url("../media/OpenSans-Regular.ttf");
+}
+
 .navbar-header {	
 	position: fixed;
-	font-family: 'Times New Roman', Times, serif;
+	font-family: OpenSans, 'Times New Roman', Times, serif;
 	background-color: #ffffff;
 	height: 98px; width: 100%;
 	top: 0; left: 0;
@@ -36,7 +41,7 @@ body {
 }
 
 .subject-name {
-	font-size: 2.5em;
+	font-size: 1.8em;
 	color: #000000;
 	text-decoration: none;
 	letter-spacing: 3px;
@@ -49,7 +54,7 @@ body {
 }
 
 .directory a {
-	font-size: 1.6em;
+	font-size: 1em;
 	text-decoration: none;
 	color: #666666;
 	margin: 0.5em;

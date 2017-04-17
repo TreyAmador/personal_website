@@ -3,6 +3,7 @@
 .about-wrapper {
     position: relative;
     height: 1000px;
+    clear: both;
 }
 
 .self-description {
@@ -11,7 +12,7 @@
     width: 75%;
     margin: 0 auto;
     /*font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;*/
-    font-family: 'Times New Roman', Times, serif;
+    font-family: OpenSans, 'Times New Roman', Times, serif;
 }
 
 .self-portrait {
@@ -36,27 +37,24 @@
 
 .col-1 {
     position: relative;
-    float: left;
-    padding: 0 1% 0 1%;
-    width: 48%;
-    height: auto;
+    float: left; text-align: right;
+    width: 48%; height: auto;
+    padding: 0 2% 0 0;
 }
 
 .col-2 {
     position: relative;
-    float: right;
-    padding: 0 1% 0 1%;
-    width: 48%;
-    height: auto;
+    float: right; text-align: left;
+    width: 48%; height: auto;
+    padding: 0 0 0 2%;
 }
 
 .resume-directory {
-    position: absolute;
-    top: 53em;
-    right: 10%;
+    position: relative;
+    top: 0em; right: 10%;
     float: right;
-    /*font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;*/
-    font-family: 'Times New Roman', Times, serif;
+    font-family: OpenSans, 'Times New Roman', Times, serif;
+    height: 100px;
 }
 
 .resume-directory nav a {

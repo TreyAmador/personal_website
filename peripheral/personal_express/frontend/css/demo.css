@@ -1,6 +1,51 @@
-/*
-    stylesheet for demos
-*/
+/* stylesheet for demos */
+
+.demo-wrapper {
+    position: relative;
+    top: 200px; left: 0px;
+    width: 100%;
+    clear: both;
+}
+
+.demo-media {
+    position: relative;
+    top: 0px; left: 20%;
+    width: 60%;
+    background-color: #dddddd;
+}
+
+.demo-media video {
+    position: relative;
+    top: 5px; left: 5px;
+    bottom: 5px; right: 5px;
+    width: 100%;
+}
+
+.demo-description {
+    position: relative;
+    top: 100px; left: 10%;
+    width: 80%;
+    font-family: OpenSans, 'Times New Roman', Times, serif;
+}
+
+.demo-description .demo-header {
+    position: relative;
+    top: 0px; left: 0%;
+    width: 48%;
+    float: left; clear: left;
+    text-align: right;
+    font-size: 2em;
+    
+}
+
+.demo-description .demo-textbody {
+    position: relative;
+    float: right; clear: right;
+    top: 0px; left: 2%;
+    width: 48%;
+    font-size: 1.5em;
+
+}
 
 
 /*

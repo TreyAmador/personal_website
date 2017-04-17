@@ -6,38 +6,63 @@
 var app = angular.module('personal',[]);
 
 
-app.config(function($provide) {
-    $provide.factory('demo',function() {
-        return {
-            cengine:'cengine',
-            trader:'trader',
-            robot:'robot',
-            drum:'drum',
-            asteroids:'asteroids'
-        };
-    });
-});
-
-
-app.controller('homeCtrl',function($scope,$rootScope,$http,demo) {
+app.controller('homeCtrl',function($scope,$http) {
     // home controller
     
-    $scope.query_demo = function(route) {
-        //console.log(demo.cengine);
-
-        $rootScope.demo = route;
-
-    }
-
 });
 
 
-app.controller('demoCtrl',function($scope,$rootScope,$http,demo) {
+app.controller('demoCtrl',function($scope,$http) {
     // projects slide back and forth
 
-    //console.log('from demo controller',demo.cengine);
-    console.log($rootScope.demo);
 
+    /*
+    var Demo = function(media,header,textbody) {
+        this.media = media;
+        this.header = header;
+        this.textbody = textbody;
+    }
+
+    var demos = {
+        'cengine': new Demo(
+            'cengine.mp4',
+            'C++ game engine with SDL graphics library',
+            ''
+        ),
+        'trader': new Demo(
+            'trader video',
+            '',
+            ''
+        ),
+        'robot': new Demo(
+            '',
+            '',
+            ''
+        ),
+        'drum': new Demo(
+            '',
+            '',
+            ''
+        ),
+        'asteroids': new Demo(
+            '',
+            '',
+            ''
+        )
+    }
+
+    var load_info = function() {
+
+        var route = window.location.href.split('/').pop();
+        var demo = demos[route];
+
+        $scope.media = demo.media;
+        $scope.header = demo.header;
+        $scope.textbody = demo.textbody;
+
+    }
+    load_info();
+    */
 
 });
 

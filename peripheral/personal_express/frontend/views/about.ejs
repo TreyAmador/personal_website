@@ -7,7 +7,7 @@
   </head>
   <body ng-app="personal">
     <header><% include ./partials/header.ejs %></header>
-    <div class="about-wrapper" ng-controller="docCtrl">
+    <div class="about-wrapper">
       <div class="self-description">
         <div class="self-portrait"></div>
         <div class="description-wrapper">
@@ -33,13 +33,15 @@
           </div>
         </div>
       </div>
-      <div class="resume-directory">
-        <nav>
-          <a class="resume green-hover" ng-click="open_pdf('resume')">pdf resume</a>
-          <a class="nih blue-hover" ng-click="open_pdf('nih')">research article 1</a>
-          <a class="ugrj purple-hover" ng-click="open_pdf('ugrj')">research article 2</a>
-        </nav>
-      </div>
+      
+    </div>
+    
+    <div class="resume-directory" ng-controller="docCtrl">
+      <nav>
+        <a class="resume green-hover" ng-click="open_pdf('resume')">pdf resume</a>
+        <a class="nih blue-hover" ng-click="open_pdf('nih')">research article 1</a>
+        <a class="ugrj purple-hover" ng-click="open_pdf('ugrj')">research article 2</a>
+      </nav>
     </div>
 
   </body>
