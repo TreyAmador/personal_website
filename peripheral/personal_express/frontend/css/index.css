@@ -46,6 +46,11 @@ body {
 	text-decoration: none;
 	letter-spacing: 3px;
 	float: left; clear: left;
+	transition: color 500ms linear;
+}
+
+.subject-name:hover {
+	color: #dddddd;
 }
 
 .directory {
