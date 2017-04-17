@@ -4,7 +4,9 @@
 <html>
   <head>
     <% include ./partials/head %>
+    <title>Contact | Trey Amador</title>
   </head>
+  
   <body ng-app="personal">
     <header><% include ./partials/header.ejs %></header>
     <div class="message-wrapper" ng-controller="formCtrl">
@@ -27,7 +29,7 @@
         </div>
       </form>
 
-      <div>{{submission_result}}</div>
+      <div>{{ submission_result }}</div>
 
     </div>
 

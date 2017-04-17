@@ -172,6 +172,10 @@
     text-align: right;
 }
 
+.entry a {
+    cursor: pointer;
+}
+
 ::selection {
     background: #000000;
     color: #ffffff;

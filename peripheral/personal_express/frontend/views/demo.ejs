@@ -1,0 +1,24 @@
+
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <% include ./partials/head.ejs %>
+    <title>Demo | Trey Amador</title>
+  </head>
+  <body ng-app="personal">
+    <header><% include ./partials/header.ejs %></header>
+
+    <br><br><br><br><br><br><br>
+
+    <div class="demo-wrapper" ng-controller="demoCtrl">
+      <div class="demo-media">media: {{ media }}</div>
+      <div class="demo-description">
+        <div class="demo-header">header: {{ header }}</div>
+        <div class="demo-textbody">textbody: {{ textbody }}</div>
+      </div>
+    </div>
+
+  </body>
+</html>
+
