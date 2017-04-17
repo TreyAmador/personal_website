@@ -15,15 +15,49 @@ var addEvent = function(object,type,callback) {
 }
 
 
+/*
 var cursor = function() {
     $('.resume-directory nav a').hover(function() {
         $(this).css('cursor','pointer');
     });
 }
+*/
+
+/*
+headline.find('.language').animate({
+    opacity:'0.0',
+    bottom:'-=10px'
+},{
+    duration:200,
+    easing:'swing'
+});
+*/
+
+
+var link_jump = function() {
+    $('.resume-directory nav a').each(function(index,value) {
+        $(this).hover(function() {            
+            $(this).animate({
+                top:'-=10px'
+            },{
+                duration:300,
+                easing:'linear'
+            });
+        },function() {
+            $(this).animate({
+                top:'+=10px'
+            },{
+                duration:300,
+                easing:'linear'
+            });
+        });
+    });
+}
 
 
 $(document).ready(function() {
-    cursor();
+    //cursor();
+    link_jump();
 });
 
 

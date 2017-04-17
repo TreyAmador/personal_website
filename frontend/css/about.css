@@ -2,24 +2,22 @@
 
 .about-wrapper {
     position: relative;
-    height: 1000px;
+    top: 100px; left: 0px;
+    width: 100%;
 }
 
-.introduction {
+.self-description {
     position: relative;
-    top: 3em;
-    width: 75%;
-    margin: 0 auto;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    width: 70%; left: 15%;
+    font-family: OpenSans, 'Times New Roman', Times, serif;
 }
 
 .self-portrait {
     position: relative;
     border-radius: 50%;
-    width: 30em;
-    height: 30em;
+    width: 25em; height: 25em;
     margin: 0 auto;
-    background-size: 30em 30em;
+    background-size: 25em 25em;
     background-image: url("../img/self-washed-out.jpg");
 }
 
@@ -28,7 +26,7 @@
     font-size: 1.3em;
     top: 1em;
     width: 100%;
-    height: auto;
+    clear: both;
 }
 
 .description-wrapper span {
@@ -37,56 +35,42 @@
 
 .col-1 {
     position: relative;
-    float: left;
-    padding: 0 1% 0 1%;
+    float: left; clear: left;
+    text-align: right;
     width: 48%;
-    height: auto;
+    padding: 0 2% 0 0;
 }
 
 .col-2 {
     position: relative;
-    float: right;
-    padding: 0 1% 0 1%;
+    float: right; clear: right;
+    text-align: left;
     width: 48%;
-    height: auto;
+    padding: 0 0 0 2%;
+}
+
+.resume-directory-wrapper {
+    position: relative;
+    top: 7em; left: 0;
+    width: 100%; height: 100px;
+    font-family: OpenSans, 'Times New Roman', Times, serif;
 }
 
 .resume-directory {
-    position: absolute;
-    top: 53em;
-    right: 10%;
+    position: relative;
+    top: 0; right: 10%;
+    width: 80%; height: 100%;
+    text-align: right;
     float: right;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 .resume-directory nav a {
-    padding: 1em;
+    position: relative;
+    margin: 1em 1em 1em 1em;
     text-decoration: none;
-    color: #000000;
+    color: #555555;
+    font-size: 1.2em;
     transition: color 500ms ease;
-}
-
-.resume {
-    position: relative;
-    top: 0em;
-}
-
-.riverside {
-    position: relative;
-    top: 1em;
-}
-
-.pomona {
-    position: relative;
-    top: 2em;
-}
-
-.nih {
-    position: relative;
-    top: 3em;
-}
-
-.ugrj {
-    position: relative;
-    top: 4em;
+    -webkit-transition: color 500ms ease;
+    cursor: pointer;
 }

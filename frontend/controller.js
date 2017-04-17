@@ -1,84 +1,20 @@
-/**
- * routing applications
- */
+/*
+    frontend controller system
+*/
 
 
-var app = angular
-    .module('personalApp',['ngRoute'])
-    .config(function($routeProvider,$locationProvider) {
-        $routeProvider
-            .when('/', {
-                templateUrl: 'views/home.html',
-                controller: 'homeCtlr'
-            })
-            .when('/about', {
-                templateUrl: 'views/about.html',
-                controller: 'aboutCtlr'
-            })
-            .when('/cengine', {
-                templateUrl: 'views/demo/cengine.html',
-                controller: 'demoCtlr'
-            })
-            .when('/trader', {
-                templateUrl: 'views/demo/trader.html',
-                controller: 'demoCtlr'
-            })
-            .when('/asteroids', {
-                templateUrl: 'views/demo/asteroids.html',
-                controller: 'demoCtlr'
-            })
-            .when('/robot', {
-                templateUrl: 'views/demo/robot.html',
-                controller: 'demoCtlr'
-            })
-            .when('/drum', {
-                templateUrl: 'views/demo/drum.html',
-                controller: 'demoCtlr'
-            })
-            .when('/blog', {
-                templateUrl: 'views/blog.html',
-                controller: 'blogCtlr'
-            })
-            .when('/contact', {
-                templateUrl: 'views/contact.html',
-                controller: 'contactCtlr'
-            })
-            .otherwise({
-                templateUrl: 'views/error.html',
-                controller: 'errorCtlr'
-            });
-        $locationProvider.html5Mode({ enabled: true });
-        $locationProvider.hashPrefix('');
-    });
+var app = angular.module('personal',[]);
 
 
-const docs = {
-    'resume':'files/Amador_Trey_Web_Resume.pdf',
-    'riverside':'files/Amador_Trey_UCR_Unofficial.pdf',
-    'pomona':'files/Amador_Trey_Pomona_Unofficial.pdf',
-    'nih':'https://www.ncbi.nlm.nih.gov/pmc/articles/'+
-            'PMC5013726/pdf/nihms-808778.pdf',
-    'ugrj':'http://ssp.ucr.edu/journal/volumes/'+
-            'volume7/ugrjournal-volvii_amador.pdf'
-};
-
-
-app.controller('homeCtlr', function($scope,$http) {
-    $scope.open_pdf = function() {
-        open_document();
-    }
-});
-
-
-app.controller('aboutCtlr',function($scope,$http) {
-    $scope.open_pdf = function(key) {
-        open_document(key);
-    }    
-});
-
-
-app.controller('demoCtlr',function($scope) {
+app.controller('homeCtrl',function($scope,$http) {
+    // home controller
     
+});
+
+
+app.controller('demoCtrl',function($scope,$http) {
+    // projects slide back and forth
+
     var mapurls = new Map([
         ['/cengine', 'Game Engine'],
         ['/trader', 'BroncoCorner'],
@@ -89,33 +25,91 @@ app.controller('demoCtlr',function($scope) {
     var urls = Array.from(mapurls.keys());
     var length = urls.length;
 
+    var set_dir = function(tag,key,mapurl) {
+        $(tag).html(
+            '<a href=\"'+key+'\">'+mapurl.get(key)+'</a>');
+    }
+
     var load_directory = function() {
         var http = $(location).attr('href').split('/').pop();
         var i = urls.indexOf('/'+http);
         var prev = urls[(i-1 + length) % length];
         var next = urls[(i+1) % length];
-        $('.left-demo').html(
-            '<a href=\"'+prev+'\">'+mapurls.get(prev)+'</a>');
-        $('.right-demo').html(
-            '<a href=\"'+next+'\">'+mapurls.get(next)+'</a>');
+
+        set_dir('.left-demo',prev,mapurls);
+        set_dir('.right-demo',next,mapurls);
     }
 
     load_directory();
-    
+
+
+
+    /*
+    var Demo = function(media,header,textbody) {
+        this.media = media;
+        this.header = header;
+        this.textbody = textbody;
+    }
+
+    var demos = {
+        'cengine': new Demo(
+            'cengine.mp4',
+            'C++ game engine with SDL graphics library',
+            ''
+        ),
+        'trader': new Demo(
+            'trader video',
+            '',
+            ''
+        ),
+        'robot': new Demo(
+            '',
+            '',
+            ''
+        ),
+        'drum': new Demo(
+            '',
+            '',
+            ''
+        ),
+        'asteroids': new Demo(
+            '',
+            '',
+            ''
+        )
+    }
+
+    var load_info = function() {
+
+        var route = window.location.href.split('/').pop();
+        var demo = demos[route];
+
+        $scope.media = demo.media;
+        $scope.header = demo.header;
+        $scope.textbody = demo.textbody;
+
+    }
+    load_info();
+    */
+
 });
 
 
-app.controller('contactCtlr',function($scope,$http) {
+app.controller('formCtrl',function($scope,$http) {
+
     var reset_input = function() {
         $scope.message.username = '';
         $scope.message.subject = '';
         $scope.message.textbody = '';
         $scope.message.email = '';
     }
+
     var reset_result = function() {
         $scope.submission_result = '';
     }
-    $scope.submit = function(message) {
+
+    $scope.submit_form = function() {
+        // check form here
         var proper_input = true;
         $('input,textarea').each(function() {
             var holder = $(this).attr('placeholder');
@@ -125,48 +119,40 @@ app.controller('contactCtlr',function($scope,$http) {
             }
         });
         if (proper_input) {
-            var user_message = $scope.message;
-            $http.post('/user-message',user_message).then(function(res) {
-                if (res.data.code == 500) {
-                    $scope.submission_result = res.data.errormsg;
-                } else if (res.data.code == 200) {
-                    $scope.submission_result = 'Message sent!';
-                    reset_input();
-                } else {
-                    reset_result();
-                }
-            },function(err) {
-                $scope.submission_result = 'There was a server error.';
+            $http({
+                method:'POST',
+                url:'/contact',
+                data:$scope.message
+            }).then(function(res) {
+                $scope.submission_result = 'Message sent!';
+                reset_input();
+            }, function(res) {
+                $scope.submission_result = 'Error sending message!';
+                reset_input();
             });
         }
     }
 });
 
 
-app.controller('blogCtlr',function($scope) {
-    $scope.status = construction();
+app.controller('docCtrl',function($scope,$http) {
+
+    const docs = {
+        'resume':'files/Amador_Trey_Web_Resume.pdf',
+        'nih':'https://www.ncbi.nlm.nih.gov/pmc/articles/'+
+                'PMC5013726/pdf/nihms-808778.pdf',
+        'ugrj':'http://ssp.ucr.edu/journal/volumes/'+
+                'volume7/ugrjournal-volvii_amador.pdf'
+    };
+
+    $scope.open_pdf = function(dockey) {
+        if (!dockey) {
+            dockey = 'resume';
+        }
+        window.open(docs[dockey]);
+    }
 });
 
 
-app.controller('errorCtlr',function($scope,$http) {
-    $http.get('/404').then(function(res) {
-        $scope.code = res.data;
-    },function(err) {
-        $scope.code = 'unknown';
-    });
-});
-
-
-
-var open_document = function(filekey) {
-    if (!filekey)
-        filekey = 'resume';
-     window.open(docs[filekey]);
-}
-
-
-var construction = function() {
-    return 'this webpage is under construction';
-}
 
 

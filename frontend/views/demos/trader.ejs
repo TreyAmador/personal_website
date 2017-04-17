@@ -1,0 +1,51 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <% include ../partials/head.ejs %>
+    <title>BroncoCorner | Trey Amador</title>
+  </head>
+  <body ng-app="personal">
+    <header><% include ../partials/header.ejs %></header>
+
+    <div class="demo-wrapper" ng-controller="demoCtrl">
+
+      <div class="demo-media-wrapper">
+        <div class="demo-media">
+          <video class="demo-video" loop>
+            <source src="../media/trader.mp4" type="video/mp4">
+            Your browser does not support HTML5 video
+          </video>
+          <div class="playpause"></div>
+        </div>
+        <div class="demo-description">
+          <div class="demo-header">
+            Online trading service, known as BroncoCorner
+          </div>
+          <div class="demo-textbody">
+            <p>
+              The website broncocorner.com was implemented with the MEAN stack,
+              which includes node.js, Express, AngularJS, and MongoDB. 
+              It allows for registering with a Cal Poly Pomona email account.
+              There is a posting system, to which users can respond. 
+              The database of posts can be searched for convenience. 
+              Once a transaction is completed, a user can 
+              delete the post of interest. 
+              The router occurs predominantly in the frontend 
+              using the AngularJS router functiionality. 
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="demo-footer">
+        <div class="demo-footer-inner">
+          <span class="left-demo"></span>
+          <span class="right-demo"></span>
+        </div>
+      </div>
+      
+    </div>
+    
+  </body>
+</html>
