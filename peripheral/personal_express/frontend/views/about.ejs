@@ -34,15 +34,17 @@
         </div>
       </div>
       
+      <div class="resume-directory-wrapper">
+        <div class="resume-directory" ng-controller="docCtrl">
+          <nav>
+            <a ng-click="open_pdf('resume')">pdf resume</a>
+            <a ng-click="open_pdf('nih')">research article 1</a>
+            <a ng-click="open_pdf('ugrj')">research article 2</a>
+          </nav>
+        </div>
+      </div>
+
     </div>
     
-    <div class="resume-directory" ng-controller="docCtrl">
-      <nav>
-        <a class="resume green-hover" ng-click="open_pdf('resume')">pdf resume</a>
-        <a class="nih blue-hover" ng-click="open_pdf('nih')">research article 1</a>
-        <a class="ugrj purple-hover" ng-click="open_pdf('ugrj')">research article 2</a>
-      </nav>
-    </div>
-
   </body>
 </html>
