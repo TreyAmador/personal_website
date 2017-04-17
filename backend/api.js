@@ -6,6 +6,7 @@
 var express = require('express');
 var app = express.Router();
 var path = require('path');
+var emailer = require('./emailer.js');
 
 
 app.get('/',function(req,res,next) {
@@ -19,12 +20,24 @@ app.get('/about',function(req,res,next) {
 
 
 app.get('/contact',function(req,res,next) {
+
+    //emailer('hey!');
+    //console.log('after emailer');
     res.render('../frontend/views/contact');
 });
 
 
-app.post('/contact',function(req,res,next) {    
-    res.send('Message sent!');
+app.post('/contact',function(req,res,next) {
+
+    var res_msg = emailer(
+        req.body.username,
+        req.body.subject,
+        req.body.email,
+        req.body.textbody
+    );
+
+    res.send(res_msg);
+    
 });
 
 
