@@ -15,6 +15,34 @@ app.controller('homeCtrl',function($scope,$http) {
 app.controller('demoCtrl',function($scope,$http) {
     // projects slide back and forth
 
+    var mapurls = new Map([
+        ['/cengine', 'Game Engine'],
+        ['/trader', 'BroncoCorner'],
+        ['/asteroids', 'Asteroids'],
+        ['/robot', 'Robotics'],
+        ['/drum', 'Drum machine']
+    ]);
+    var urls = Array.from(mapurls.keys());
+    var length = urls.length;
+
+    var set_dir = function(tag,key,mapurl) {
+        $(tag).html(
+            '<a href=\"'+key+'\">'+mapurl.get(key)+'</a>');
+    }
+
+    var load_directory = function() {
+        var http = $(location).attr('href').split('/').pop();
+        var i = urls.indexOf('/'+http);
+        var prev = urls[(i-1 + length) % length];
+        var next = urls[(i+1) % length];
+
+        set_dir('.left-demo',prev,mapurls);
+        set_dir('.right-demo',next,mapurls);
+    }
+
+    load_directory();
+
+
 
     /*
     var Demo = function(media,header,textbody) {
