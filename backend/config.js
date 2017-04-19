@@ -24,7 +24,6 @@ module.exports = function(express) {
     app.use(favicon(path.join(__dirname,'../frontend','img','mesh.png')));
     app.use('/',api);
 
-    // the emailer should be here
     emailer(app);
     errors(app);
     

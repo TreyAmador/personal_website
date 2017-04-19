@@ -24,26 +24,6 @@ app.get('/contact',function(req,res,next) {
 });
 
 
-//app.post('/contact',function(req,res,next) {
-    // res.send('It worked!');
-    /*
-    var res_msg = emailer(
-        req.body.username,
-        req.body.subject,
-        req.body.email,
-        req.body.textbody
-    );
-    console.log('/contact post',res_msg);
-    //res.send({
-    //    msg:res_msg
-    //});
-    return res.send({
-        msg:res_msg
-    });
-    */
-//});
-
-
 app.get('/cengine',function(req,res,next) {
     res.render('../frontend/views/demos/cengine');
 });
