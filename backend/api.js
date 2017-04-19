@@ -6,7 +6,7 @@
 var express = require('express');
 var app = express.Router();
 var path = require('path');
-var emailer = require('./emailer.js');
+//var emailer = require('./emailer.js');
 
 
 app.get('/',function(req,res,next) {

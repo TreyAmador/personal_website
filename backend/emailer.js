@@ -43,7 +43,6 @@ module.exports = function(app) {
         }
 
         transporter.sendMail(mailOptions,function(error,info) {
-            var msg = '';
             if (error) {            
                 return res.send({
                     msg:'There was an error sending message!',

@@ -1,4 +1,3 @@
-
 <!doctype html>
 <html lang="en">
   <head>
@@ -7,9 +6,7 @@
   </head>
   <body ng-app="personal">
     <header><% include ../partials/header.ejs %></header>
-
     <div class="demo-wrapper" ng-controller="demoCtrl">
-
       <div class="demo-media-wrapper">
         <div class="demo-media">
           <video class="demo-video" loop>
@@ -24,28 +21,30 @@
           </div>
           <div class="demo-textbody">
             <p>
-              The website broncocorner.com was implemented with the MEAN stack,
-              which includes node.js, Express, AngularJS, and MongoDB. 
-              It allows for registering with a Cal Poly Pomona email account.
-              There is a posting system, to which users can respond. 
-              The database of posts can be searched for convenience. 
-              Once a transaction is completed, a user can 
-              delete the post of interest. 
-              The router occurs predominantly in the frontend 
-              using the AngularJS router functiionality. 
+              BroncoCorner was created to give college students an online buying and 
+              selling service. Classified ads or sites like craigslist allow similar 
+              functionality, but are not local, occasionally untrustworth, and not 
+              specific to the demands of this demographic. Users register with a Cal 
+              Poly Pomona email account. Once joined, they can make posts ranging 
+              from buying and selling goods, to recruiting local talent, to inquiring 
+              about social events. The database can be searched for specific criteria. 
+              Users can then respond to others using the private inboxing system. 
+              The video above shows how a typical user may register, make a post, and 
+              respond to other posts.
+            </p>
+            <p>
+              The website was implemented using a MEAN Stack (node.js, Express, MongoDB, 
+              and AngularJS). 
             </p>
           </div>
         </div>
       </div>
-
       <div class="demo-footer">
         <div class="demo-footer-inner">
           <span class="left-demo"></span>
           <span class="right-demo"></span>
         </div>
       </div>
-      
     </div>
-    
   </body>
 </html>

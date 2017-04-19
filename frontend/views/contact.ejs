@@ -1,12 +1,9 @@
-<!-- contact sheet, with form -->
-
 <!doctype html>
 <html>
   <head>
     <% include ./partials/head %>
     <title>Contact | Trey Amador</title>
   </head>
-  
   <body ng-app="personal">
     <header><% include ./partials/header.ejs %></header>
     <div class="message-wrapper" ng-controller="formCtrl">
@@ -32,11 +29,7 @@
           <input type="submit" ng-click="submit_form()" name="submit" value="Send">
         </div>
       </form>
-
       <div class="submission-result">{{ submission_result }}</div>
-
     </div>
-
-
   </body>
 </html>
