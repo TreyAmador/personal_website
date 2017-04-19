@@ -12,7 +12,7 @@ module.exports = function(express) {
     var bodyParser = require('body-parser');
     var favicon = require('serve-favicon');
     var api = require('./api.js');
-    //var emailer = require('./emailer.js');
+    var emailer = require('./emailer.js');
     var errors = require('./error.js');
     app.set('view engine','ejs');
 
@@ -23,6 +23,9 @@ module.exports = function(express) {
     app.use(express.static(path.join(__dirname,'../frontend')));
     app.use(favicon(path.join(__dirname,'../frontend','img','mesh.png')));
     app.use('/',api);
+
+    // the emailer should be here
+    emailer(app);
     errors(app);
     
     return app;

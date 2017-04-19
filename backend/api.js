@@ -20,25 +20,28 @@ app.get('/about',function(req,res,next) {
 
 
 app.get('/contact',function(req,res,next) {
-
-    //emailer('hey!');
-    //console.log('after emailer');
     res.render('../frontend/views/contact');
 });
 
 
-app.post('/contact',function(req,res,next) {
-
+//app.post('/contact',function(req,res,next) {
+    // res.send('It worked!');
+    /*
     var res_msg = emailer(
         req.body.username,
         req.body.subject,
         req.body.email,
         req.body.textbody
     );
-
-    res.send(res_msg);
-    
-});
+    console.log('/contact post',res_msg);
+    //res.send({
+    //    msg:res_msg
+    //});
+    return res.send({
+        msg:res_msg
+    });
+    */
+//});
 
 
 app.get('/cengine',function(req,res,next) {

@@ -124,10 +124,11 @@ app.controller('formCtrl',function($scope,$http) {
                 url:'/contact',
                 data:$scope.message
             }).then(function(res) {
-                $scope.submission_result = 'Message sent!';
+                $scope.submission_result = res.data.msg;
+                console.log('after send frontend',res.data.msg);
                 reset_input();
             }, function(res) {
-                $scope.submission_result = 'Error sending message!';
+                $scope.submission_result = res.data.msg;
                 reset_input();
             });
         }
