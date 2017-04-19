@@ -14,13 +14,16 @@ module.exports = function(app) {
 
     app.post('/contact',function(req,res,next) {
 
+        var sender = process.argv[2];
+        var sendpass = process.argv[3];
+        
         var transporter = nodemailer.createTransport(smtpTransport({
             service:'Gmail',
             secure:false,
             port:25,
             auth:{
-                user:'6709413@gmail.com',
-                pass:'' // this doesn't work
+                user:sender,
+                pass:sendpass // this doesn't work
             },
             tls:{
                 rejectUnauthorized:false

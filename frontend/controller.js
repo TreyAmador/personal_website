@@ -119,6 +119,8 @@ app.controller('formCtrl',function($scope,$http) {
             }
         });
         if (proper_input) {
+            
+            $scope.submission_result = 'Processing request...';
             $http({
                 method:'POST',
                 url:'/contact',
