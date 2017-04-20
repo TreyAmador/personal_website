@@ -1,5 +1,7 @@
 /**
  * the server
+ * entry point of the program
+ * requires email and pass
  */
 
 

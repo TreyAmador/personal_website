@@ -42,56 +42,6 @@ app.controller('demoCtrl',function($scope,$http) {
 
     load_directory();
 
-
-
-    /*
-    var Demo = function(media,header,textbody) {
-        this.media = media;
-        this.header = header;
-        this.textbody = textbody;
-    }
-
-    var demos = {
-        'cengine': new Demo(
-            'cengine.mp4',
-            'C++ game engine with SDL graphics library',
-            ''
-        ),
-        'trader': new Demo(
-            'trader video',
-            '',
-            ''
-        ),
-        'robot': new Demo(
-            '',
-            '',
-            ''
-        ),
-        'drum': new Demo(
-            '',
-            '',
-            ''
-        ),
-        'asteroids': new Demo(
-            '',
-            '',
-            ''
-        )
-    }
-
-    var load_info = function() {
-
-        var route = window.location.href.split('/').pop();
-        var demo = demos[route];
-
-        $scope.media = demo.media;
-        $scope.header = demo.header;
-        $scope.textbody = demo.textbody;
-
-    }
-    load_info();
-    */
-
 });
 
 
