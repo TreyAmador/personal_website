@@ -9,25 +9,11 @@
     <div class="message-wrapper" ng-controller="formCtrl">
       <div class="input-greeting">Get in touch.</div>
       <form class="input-list">
-        <div>
-          <input type="text" ng-model="message.username" placeholder="Name">
-          <!--<span></span>-->
-        </div>
-        <div>
-          <input type="text" ng-model="message.subject" placeholder="Subject">
-          <!--<span></span>-->
-        </div>
-        <div>
-          <input type="text" ng-model="message.email" placeholder="E-mail (optional)">
-          <!--<span></span>-->
-        </div>
-        <div>
-          <textarea ng-model="message.textbody" placeholder="Message"></textarea>
-          <!--<span></span>-->
-        </div>
-        <div>
-          <input type="submit" ng-click="submit_form()" name="submit" value="Send">
-        </div>
+        <div><input type="text" ng-model="message.username" placeholder="Name"></div>
+        <div><input type="text" ng-model="message.subject" placeholder="Subject"></div>
+        <div><input type="text" ng-model="message.email" placeholder="E-mail (optional)"></div>
+        <div><textarea ng-model="message.textbody" placeholder="Message"></textarea></div>
+        <div><input type="submit" ng-click="submit_form()" name="submit" value="Send"></div>
       </form>
       <div class="submission-result">{{ submission_result }}</div>
     </div>

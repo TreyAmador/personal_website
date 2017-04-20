@@ -1,3 +1,8 @@
+/*
+    the error manager
+    comment-out development error handler before deployment
+    
+*/
 
 
 module.exports = function(app) {

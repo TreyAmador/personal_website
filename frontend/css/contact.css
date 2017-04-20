@@ -59,11 +59,12 @@
     font-size: 1em;
     border: none;
     transition: all 500ms linear;
+    -webkit-transition: all 500ms linear;
     
 }
 
 .input-list div input:hover,textarea:hover {
-    background-color: #dddddd;
+    background-color: #eeeeee;
 }
 
 .input-list div input:focus,textarea:focus {

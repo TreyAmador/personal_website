@@ -13,8 +13,8 @@ app.controller('homeCtrl',function($scope,$http) {
 
 
 app.controller('demoCtrl',function($scope,$http) {
+    
     // projects slide back and forth
-
     var mapurls = new Map([
         ['/cengine', 'Game Engine'],
         ['/trader', 'BroncoCorner'],
@@ -59,6 +59,7 @@ app.controller('formCtrl',function($scope,$http) {
     }
 
     $scope.submit_form = function() {
+
         // check form here
         var proper_input = true;
         $('input,textarea').each(function() {
@@ -66,8 +67,10 @@ app.controller('formCtrl',function($scope,$http) {
             if (holder !== 'E-mail (optional)' && (!$(this) || !$(this).val())) {
                 $scope.submission_result = holder+' space left blank.';
                 proper_input = false;
+                return false;
             }
         });
+
         if (proper_input) {
             
             $scope.submission_result = 'Processing request...';
