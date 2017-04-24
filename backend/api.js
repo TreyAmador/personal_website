@@ -29,7 +29,7 @@ app.get('/contact',function(req,res,next) {
 
 app.get('/blog',function(req,res,next) {
     res.render(view_filepath+'blog',{
-        constructor:'This page is construction...'
+        constructor:'This page is under construction...'
     });
 });
 

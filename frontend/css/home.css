@@ -117,7 +117,7 @@
 }
 
 .drum-image {
-    background-image: url("../img/audiograph.png");
+    background-image: url("../img/audiograph-stroke.png");
     background-position: 50% 50%;
 }
 
@@ -126,7 +126,7 @@
 }
 
 .trader-image {
-    background-image: url("../img/corner01.png");
+    background-image: url("../img/corner.png");
     background-position: 50% 0%;
 }
 

@@ -89,8 +89,10 @@ app.controller('formCtrl',function($scope,$http) {
                 $scope.submission_result = res.data.msg;
                 reset_input();
             });
+
         }
     }
+
 });
 
 
@@ -110,6 +112,7 @@ app.controller('docCtrl',function($scope,$http) {
         }
         window.open(docs[dockey]);
     }
+    
 });
 
 
