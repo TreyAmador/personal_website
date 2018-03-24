@@ -1,16 +1,13 @@
 
-
 body {
   margin: 0px;
   background-color: beige;
 }
 
-
 @font-face {
     font-family: OpenSans;
     src: url("../deps/OpenSans-Regular.ttf");
 }
-
 
 .navbar-outer {
   position: fixed;
@@ -70,6 +67,3 @@ body {
 .navbar-outer .navbar-inner span a:hover {
   color: #666;
 }
-
-
-
