@@ -16,6 +16,7 @@
 
 body {
     margin: 0; padding: 0;
+    display: none;
 }
 
 ::selection {
@@ -70,10 +71,7 @@ body {
 .desc-container .desc-body {
     position: relative;
     left: 20%; width: 60%;
-    padding: 2em 0em 0em 0em;
+    padding: 2em 0em 2em 0em;
     font: 1.5em serif;
     color: #000000;
 }
-
-
-

@@ -3,12 +3,23 @@
  */
 
 
-function snow() {
-    console.log('it\'s snowing!')
+function display_page() {
+    $('body').fadeIn('slow', function() {});
 }
 
 
-$(document).ready(function() {
-    snow()
+function snowing() {
+
+    var particles = []
+    
+    $('.effect-hook').append(particles);
+
+}
+
+
+$(window).ready(function() {
+    snowing();
+    display_page();
 });
+
 
