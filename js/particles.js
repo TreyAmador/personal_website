@@ -10,16 +10,22 @@ function display_page() {
 }
 
 
+function init_var(x, y) {
+    return Math.round(Math.random()*x + y);
+}
+
+
 function Particle() {
-    this.x = Math.round(Math.random()*window.innerWidth);
-    this.y = Math.round(Math.random()*window.innerHeight);
-    this.dim = Math.round(Math.random()*10+10);
+    this.x = init_var(window.innerWidth, 0);
+    this.y = init_var(window.innerHeight, 1.1*(-window.innerHeight));
+    this.vx = init_var(1000, 0);
+    this.dim = init_var(10, 10);
     this.color = '#cfecec';
 }
 
 
 function init_particles() {
-    var plen = 50;
+    var plen = 20;
     var particles = new Array(plen);
     for (var i = 0; i < plen; ++i) {
         particles[i] = new Particle();
@@ -30,8 +36,12 @@ function init_particles() {
 
 function update_particles(particles, update_time) {
     particles.forEach(function(ptc) {
-        ptc.x += 2*Math.PI*Math.sin(update_time);
+        ptc.x += Math.PI*Math.sin(update_time+ptc.vx);
         ptc.y += 1;
+        if (ptc.y > window.outerHeight + ptc.dim) {
+            ptc.y = -ptc.dim;
+            ptc.x = init_var(window.innerWidth, 0);
+        }
     });
 }
 
@@ -72,7 +82,7 @@ function snowing() {
         var update_time = get_interval(init_time);
         update_particles(particles, update_time);
         draw_particles(particles);
-    }, 100);
+    }, 50);
 }
 
 
