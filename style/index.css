@@ -26,13 +26,14 @@ body {
 .page-container {
     position: relative; vertical-align: middle;
     left: 20%; right: 80%; width: 60%; 
-    top: 20%; bottom: 80%; height: 60%;
+    top: 10%; bottom: 90%; height: 60%;
 }
 
 .name-container .name-placard {
     position: relative; text-align: center;
     font: 10em Dancing, serif; color: #cccccc;
     transition: color 500ms ease;
+    white-space: nowrap;
 }
 
 .name-container .name-placard:hover {

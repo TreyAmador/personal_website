@@ -15,13 +15,23 @@ function init_var(x, y) {
 }
 
 
+function init_color() {
+    var colors = [
+        '#cfe0e8', '#b7d7e8', '#87bdd8', '#daebe8', 
+        '#fbefcc', '#f9ccac', '#f4a688', '#e0876a'
+    ];
+    var index = Math.floor((Math.random()*1000) % colors.length);
+    return colors[index];
+}
+
+
 function Particle() {
     this.x = init_var(window.innerWidth, 0);
-    this.y = init_var(window.innerHeight, -window.innerHeight);
+    this.y = init_var(window.innerHeight, 1.2*(-window.innerHeight));
     this.vx = init_var(Math.PI, Math.PI/2)
     this.vy = init_var(1000, 0);
     this.dim = init_var(10, 10);
-    this.color = '#cfecec';
+    this.color = init_color();
 }
 
 
