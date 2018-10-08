@@ -3,6 +3,10 @@
  */
 
 
+var POOL_HTML = '.effect-pool';
+var INTERVAL_TIME = 50;
+
+
 function display_page() {
     $('body').fadeIn('slow', function() {
         // aftereffect
@@ -25,45 +29,24 @@ function init_color() {
 }
 
 
-function Particle() {
-    this.x = init_var(window.innerWidth, 0);
-    this.y = init_var(window.innerHeight, 1.2*(-window.innerHeight));
-    this.vx = init_var(Math.PI, Math.PI/2)
-    this.vy = init_var(1000, 0);
-    this.dim = init_var(10, 10);
-    this.color = init_color();
+function below_frame(height, y_pos) {
+    return (y_pos-height) > window.innerHeight;
 }
 
 
-function init_particles() {
-    var plen = 20;
-    var particles = new Array(plen);
+function Particles(Particle, plen=20) {
+    this.particles = new Array(plen);
     for (var i = 0; i < plen; ++i) {
-        particles[i] = new Particle();
+        this.particles[i] = new Particle();
     }
-    return particles;
 }
 
 
-function update_particles(particles, update_time) {
-    particles.forEach(function(ptc) {
-        // ptc.x += Math.PI*Math.sin(update_time+ptc.vy);
-        ptc.x += ptc.vx*Math.sin(update_time+ptc.vy)
-        ptc.y += 1;
-        if (ptc.y > window.outerHeight + ptc.dim) {
-            ptc.x = init_var(window.innerWidth, 0);
-            ptc.y = -ptc.dim;
-        }
-    });
-}
-
-
-function draw_particles(particles) {
-    var ptc_html = '<div class="particle"></div>',
-        pool_html = '.effect-pool';
-    $(pool_html).empty();
-    particles.forEach(function(ptc) {
-        $(pool_html).append(ptc_html);
+Particles.prototype.draw = function() {
+    var ptc_html = '<div class="particle"></div>';
+    $(POOL_HTML).empty();
+    this.particles.forEach(function(ptc) {
+        $(POOL_HTML).append(ptc_html);
         $('.particle').last().css({
             'position': 'absolute',
             'left': ptc.x+'px',
@@ -78,6 +61,33 @@ function draw_particles(particles) {
 }
 
 
+Particles.prototype.update = function(update_time) {
+    this.particles.forEach(function(ptc) {
+        ptc.update(update_time);
+    });
+}
+
+
+function SnowParticle() {
+    this.x = init_var(window.innerWidth, 0);
+    this.y = init_var(window.innerHeight, 1.2*(-window.innerHeight));
+    this.vx = init_var(Math.PI, Math.PI/2)
+    this.vy = init_var(1000, 0);
+    this.dim = init_var(10, 10);
+    this.color = init_color();
+}
+
+
+SnowParticle.prototype.update = function(update_time) {
+    this.x += this.vx*Math.sin(update_time+this.vy);
+    this.y += 1;
+    if (below_frame(this.dim, this.y)) {
+        this.x = init_var(window.innerWidth, 0);
+        this.y = -this.dim;
+    }
+}
+
+
 function get_time() {
     return new Date().getMilliseconds();
 }
@@ -89,14 +99,25 @@ function get_interval(init_time) {
 
 
 function snowing() {
-    var init_time = get_time(),
-        interval_time = 50;
-    var particles = init_particles();
+    var particles = new Particles(SnowParticle),
+        init_time = get_time();
     setInterval(function() {
         var update_time = get_interval(init_time);
-        update_particles(particles, update_time);
-        draw_particles(particles);
-    }, interval_time);
+        particles.update(update_time);
+        particles.draw();
+    }, INTERVAL_TIME);
+}
+
+
+function wind() {
+
+    var init_time = get_time();
+    setInterval(function() {
+
+        
+
+    }, INTERVAL_TIME);
+
 }
 
 
