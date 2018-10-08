@@ -17,8 +17,9 @@ function init_var(x, y) {
 
 function Particle() {
     this.x = init_var(window.innerWidth, 0);
-    this.y = init_var(window.innerHeight, 1.1*(-window.innerHeight));
-    this.vx = init_var(1000, 0);
+    this.y = init_var(window.innerHeight, -window.innerHeight);
+    this.vx = init_var(Math.PI, Math.PI/2)
+    this.vy = init_var(1000, 0);
     this.dim = init_var(10, 10);
     this.color = '#cfecec';
 }
@@ -36,20 +37,23 @@ function init_particles() {
 
 function update_particles(particles, update_time) {
     particles.forEach(function(ptc) {
-        ptc.x += Math.PI*Math.sin(update_time+ptc.vx);
+        // ptc.x += Math.PI*Math.sin(update_time+ptc.vy);
+        ptc.x += ptc.vx*Math.sin(update_time+ptc.vy)
         ptc.y += 1;
         if (ptc.y > window.outerHeight + ptc.dim) {
-            ptc.y = -ptc.dim;
             ptc.x = init_var(window.innerWidth, 0);
+            ptc.y = -ptc.dim;
         }
     });
 }
 
 
 function draw_particles(particles) {
-    $('.effect-pool').empty();
+    var ptc_html = '<div class="particle"></div>',
+        pool_html = '.effect-pool';
+    $(pool_html).empty();
     particles.forEach(function(ptc) {
-        $('.effect-pool').append('<div class="particle"></div>');
+        $(pool_html).append(ptc_html);
         $('.particle').last().css({
             'position': 'absolute',
             'left': ptc.x+'px',
@@ -61,7 +65,6 @@ function draw_particles(particles) {
             'z-index': '1'
         });
     });
-
 }
 
 
@@ -76,13 +79,14 @@ function get_interval(init_time) {
 
 
 function snowing() {
-    var init_time = get_time();
+    var init_time = get_time(),
+        interval_time = 50;
     var particles = init_particles();
     setInterval(function() {
         var update_time = get_interval(init_time);
         update_particles(particles, update_time);
         draw_particles(particles);
-    }, 50);
+    }, interval_time);
 }
 
 
