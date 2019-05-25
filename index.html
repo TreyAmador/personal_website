@@ -1,56 +1,60 @@
+<!-- personal web page -->
 
-<html lang="en">
+<html>
   <head>
-    
-    <!-- meta-data -->
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    
-    <!-- stylesheets -->
-    <link rel="stylesheet" type="text/css" href="style/index.css">
-    
-    <!-- script dependencies -->
-    <script src="deps/jquery-3.3.1.js"></script>
-    <script src="js/particles.js"></script>
-    
-    <!-- title -->
-    <title> trey amador! </title>
-
+    <meta charset="utf-8" />
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script crossorigin src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.js"></script>
+    <title>Trey Amador</title>
   </head>
   <body>
+    <div id="content"></div>
+    <script type="text/babel">
 
-    <div class="page-container">
+      class Line extends React.Component {
+        render() {
+          var lineStyle = {
+            marginBottom: "1em",
+          };
 
-      <div class="name-container">
-        <div class="name-placard">trey amador</div>
-      </div>
-      
-      <div class="nav-container">
-        <span class="demo-entry">
-           <a href="/"> demos </a> 
-        </span>
-        <span class="resume-entry"> 
-          <a href="/files/AmadorTreyResume_10-7-18.pdf" target="_blank"> resume </a> 
-        </span>
-        <span class="github-entry"> 
-          <a href="https://github.com/treyamador"> github </a> 
-        </span>
-      </div>
-      
-      <div class="desc-container">
-        <div class="desc-body"> 
-          <span>
-            hello, my name is trey amador.  welcome to my website. 
-            here you can see some programming projects and 
-            my resume. make yourself at home.
-          </span>
-        </div>
-      </div>
+          return (
+            <div style={lineStyle}>
+              {this.props.children}
+            </div>
+          );
+        }
+      }
 
-    </div>
+      class TextBody extends React.Component {
+        render() {
+          var textBodyStyle = {
+            position: "absolute",
+            left: "15%",
+            top: "15%",
+            fontFamily: "Courier New",
+            fontSize: "2.5em",
+            color: "#000",
+            margin: 0,
+            padding: 0,
+          };
 
-    <div class="effect-pool"></div>
-    
+          return (
+            <div style={textBodyStyle}>
+              <Line>Hi, my name is Trey Amador.</Line>
+              <Line>I work in programming.</Line>
+              <Line>This is my website. It's a little sparse.</Line>
+            </div>
+          );
+        }
+      }
+
+      ReactDOM.render(
+        <div>
+          <TextBody />
+        </div>,
+        document.getElementById('content')
+      );
+    </script>
   </body>
 </html>
